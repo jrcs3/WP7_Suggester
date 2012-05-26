@@ -95,6 +95,13 @@
     <Resource Include="Images\list.png" />
     <Resource Include="Images\save.png" />
     <Resource Include="Images\settings.png" />
+    <Content Include="SampleData\Adjective.txt" />
+    <Content Include="SampleData\FemaleName.txt" />
+    <Content Include="SampleData\Location.txt" />
+    <Content Include="SampleData\Magic8.txt" />
+    <Content Include="SampleData\MaleName.txt" />
+    <Content Include="SampleData\Object.txt" />
+    <Content Include="SampleData\Profession.txt" />
     <Content Include="SplashScreenImage.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -103,6 +110,7 @@
       <Name>SuggesterControls</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
