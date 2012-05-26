@@ -8,15 +8,212 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
-using System.Windows.Shapes;
+//using System.Windows.Shapes;
+using SuggesterTools;
+using System.IO;
+using System.Reflection;
+using System.IO.IsolatedStorage;
 
 namespace SuggesterControls
 {
     public partial class MakeSuggestionCtl : UserControl
     {
+        //public event EventHandler ClickList;
+        //public event EventHandler FocusToMe;
         public MakeSuggestionCtl()
         {
             InitializeComponent();
+
+            _txtSuggestion.Text = string.Empty;
         }
+        private StorageHelper<Suggestion> _storageHelper;
+        private Suggestion[] _list;
+        private bool _listValid = false;
+
+        private IsolatedStorageSettings _settings;
+
+
+        private string _singularName;
+        public string SingularName
+        {
+            get { return _singularName; }
+            set
+            {
+                _singularName = value;
+                _btnSuggest.Content = "Next " + _singularName;
+            }
+        }
+
+        private string _pluralName;
+        public string PluralName
+        {
+            get { return _pluralName; }
+            set
+            {
+                _pluralName = value;
+                //_btnSuggest.Content = "Next " + _pluralName;
+            }
+        }
+        private string _fileName = string.Empty;
+        public string FileName
+        {
+            get { return _fileName; }
+            set
+            {
+                _fileName = value;
+                if (!string.IsNullOrWhiteSpace(_fileName))
+                {
+                    ensureList();
+                }
+            }
+        }
+
+        public int HistoryCount { get; set; }
+
+        private List<int> pickHistory
+        {
+            get
+            {
+                int[] rVal;
+                ensureSettings();
+                if (_settings.TryGetValue<int[]>(historyKeyName, out rVal))
+                {
+                    return rVal.ToList();
+                }
+                else
+                {
+                    return new List<int>();
+                }
+            }
+            set
+            {
+                if (_settings.Contains(historyKeyName))
+                {
+                    _settings[historyKeyName] = value.ToArray();
+                }
+                else
+                {
+                    _settings.Add(historyKeyName, value.ToArray());
+                }
+            }
+        }
+        private string historyKeyName
+        {
+            get { return PluralName + "History"; }
+        }
+
+        private void ensureSettings()
+        {
+            if (_settings == null)
+            {
+                _settings = IsolatedStorageSettings.ApplicationSettings;
+            }
+        }
+
+
+        private void ensureList()
+        {
+            if (!_listValid)
+            {
+                try
+                {
+                    _btnSuggest.IsEnabled = true;
+                    _storageHelper = new StorageHelper<Suggestion>(_fileName);
+                    //_list = _storageHelper.GetList().ToArray();
+                    _list = getSuggestionList().ToArray();
+                    if (_list.Length == 0)
+                    {
+                        _btnSuggest.IsEnabled = false;
+                    }
+                    _listValid = true;
+                }
+                catch (Exception)
+                {
+                    _btnSuggest.IsEnabled = false;
+                }
+            }
+        }
+
+        private void _btnSuggest_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                ensureList();
+                List<int> hList = pickHistory;
+                Random random = new Random();
+                int randomNumber;
+                do
+                {
+                    randomNumber = random.Next(0, _list.Length);
+                } while (hList.Contains(randomNumber));
+                hList.Insert(0, randomNumber);
+                while (hList.Count > HistoryCount)
+                {
+                    hList.RemoveAt(HistoryCount);
+                }
+                pickHistory = hList;
+                _txtSuggestion.Text = _list[randomNumber].Text;
+            }
+            catch
+            {
+                _btnSuggest.IsEnabled = false;
+            }
+        }
+
+        //private void _btnList_Click(object sender, RoutedEventArgs e)
+        //{
+        //    if (ClickList != null)
+        //    {
+        //        _btnSuggest.IsEnabled = true;
+        //        _listValid = false;
+        //        ClickList(this, EventArgs.Empty);
+        //    }
+        //}
+
+
+        private List<Suggestion> getSuggestionList()
+        {
+            List<Suggestion> list = _storageHelper.GetList();
+            if (list.Count == 0)
+            {
+                list = ReadResourceFile("LameSuggester.SampleData." + Path.GetFileNameWithoutExtension(_fileName) + ".txt");
+                _storageHelper.SaveList(list);
+            }
+            return list;
+        }
+
+        private static List<Suggestion> ReadResourceFile(string fileName)
+        {
+            var rVal = new List<Suggestion>();
+            int lineNumber = 1;
+            using (Stream stream = Assembly.GetExecutingAssembly()
+                               .GetManifestResourceStream(fileName))
+            {
+                using (StreamReader reader = new StreamReader(stream))
+                {
+                    while (reader.Peek() >= 0)
+                    {
+                        string line = reader.ReadLine();
+                        if (!string.IsNullOrWhiteSpace(line))
+                        {
+                            rVal.Add(new Suggestion(lineNumber++, line));
+                        }
+                    }
+                    //string result = reader.ReadToEnd();
+                }
+            }
+
+            return rVal;
+        }
+
+        //private void UserControl_GotFocus(object sender, RoutedEventArgs e)
+        //{
+        //    if (FocusToMe != null)
+        //    {
+        //        FocusToMe(this, EventArgs.Empty);
+        //    }
+        //}
+
+
     }
 }
