@@ -50,5 +50,16 @@ namespace SuggesterApp
             para.Items.Add(item);
             return sug;
         }
+
+        private void ListSuggestions_Click(object sender, EventArgs e)
+        {
+            PanoramaItem si = (PanoramaItem)_basePanorama.SelectedItem;
+            //Console.WriteLine(si.ToString());
+            var s = si.Content as MakeSuggestionCtl;
+            if (s != null)
+            {
+                this.NavigationService.Navigate(new Uri(string.Format("/ListSuggestions.xaml?xmlFile={0}&listName={1}", s.FileName, Uri.EscapeUriString(s.PluralName)), UriKind.Relative));
+            }
+        }
     }
 }

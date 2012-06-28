@@ -89,19 +89,31 @@
     <Content Include="Background.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Resource Include="Images\add.png" />
-    <Resource Include="Images\close.png" />
-    <Resource Include="Images\edit.png" />
-    <Resource Include="Images\list.png" />
-    <Resource Include="Images\save.png" />
-    <Resource Include="Images\settings.png" />
-    <Content Include="SampleData\Adjective.txt" />
-    <Content Include="SampleData\FemaleName.txt" />
-    <Content Include="SampleData\Location.txt" />
-    <Content Include="SampleData\Magic8.txt" />
-    <Content Include="SampleData\MaleName.txt" />
-    <Content Include="SampleData\Object.txt" />
-    <Content Include="SampleData\Profession.txt" />
+    <Content Include="Images\add.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\close.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\edit.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\list.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\save.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\settings.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="SampleData\Adjective.txt" />
+    <EmbeddedResource Include="SampleData\FemaleName.txt" />
+    <EmbeddedResource Include="SampleData\Location.txt" />
+    <EmbeddedResource Include="SampleData\Magic8.txt" />
+    <EmbeddedResource Include="SampleData\MaleName.txt" />
+    <EmbeddedResource Include="SampleData\Object.txt" />
+    <EmbeddedResource Include="SampleData\Profession.txt" />
     <Content Include="SplashScreenImage.jpg" />
   </ItemGroup>
   <ItemGroup>
