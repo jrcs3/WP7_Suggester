@@ -12,11 +12,13 @@
     <Grid x:Name="LayoutRoot">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
-            <RowDefinition />
+            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <Button Grid.Row="0" Name="_btnSuggest" Content="Click" Click="_btnSuggest_Click" />
-        <TextBlock Grid.Row="1" HorizontalAlignment="Center" 
+        <TextBlock Name="_txtTitle" Text="_txtTitle" FontSize="40" />
+        <Button Name="_btnSuggest" Click="_btnSuggest_Click" Grid.Row="1">
+            <TextBlock HorizontalAlignment="Center" 
                    Name="_txtSuggestion" Text="_txtSuggestion" VerticalAlignment="Center" 
-                   FontSize="56" FontWeight="Bold" TextWrapping="Wrap" TextAlignment="Center" />
+                   FontSize="48" FontWeight="Bold" TextWrapping="Wrap" TextAlignment="Center" />
+        </Button>
     </Grid>
 </UserControl>

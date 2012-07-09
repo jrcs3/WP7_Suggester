@@ -1,0 +1,16 @@
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterAppTest\Bin\Debug\ApplicationIcon.png
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterAppTest\Bin\Debug\Background.png
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterAppTest\Bin\Debug\SuggesterAppTest.dll
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterAppTest\Bin\Debug\SuggesterAppTest.pdb
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterAppTest\Bin\Debug\AppManifest.xaml
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterAppTest\Bin\Debug\SuggesterAppTest.xap
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterAppTest\Bin\Debug\Microsoft.Silverlight.Testing.dll
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterAppTest\Bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTesting.Silverlight.dll
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterAppTest\Bin\Debug\Microsoft.Silverlight.Testing.pdb
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterAppTest\Bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTesting.Silverlight.pdb
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterAppTest\obj\Debug\App.g.i.cs
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterAppTest\obj\Debug\MainPage.g.i.cs
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterAppTest\obj\Debug\SuggesterAppTest.g.resources
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterAppTest\obj\Debug\SuggesterAppTest.dll
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterAppTest\obj\Debug\SuggesterAppTest.pdb
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterAppTest\obj\Debug\XapCacheFile.xml

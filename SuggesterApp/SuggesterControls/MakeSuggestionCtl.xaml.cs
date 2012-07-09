@@ -40,7 +40,10 @@ namespace SuggesterControls
             set
             {
                 _singularName = value;
-                _btnSuggest.Content = "Next " + _singularName;
+                if (string.IsNullOrWhiteSpace(_txtSuggestion.Text))
+                {
+                    _txtSuggestion.Text = "First " + _singularName;
+                }
             }
         }
 
@@ -51,6 +54,7 @@ namespace SuggesterControls
             set
             {
                 _pluralName = value;
+                _txtTitle.Text = value;
                 //_btnSuggest.Content = "Next " + _pluralName;
             }
         }
@@ -136,28 +140,7 @@ namespace SuggesterControls
 
         private void _btnSuggest_Click(object sender, RoutedEventArgs e)
         {
-            try
-            {
-                ensureList();
-                List<int> hList = pickHistory;
-                Random random = new Random();
-                int randomNumber;
-                do
-                {
-                    randomNumber = random.Next(0, _list.Length);
-                } while (hList.Contains(randomNumber));
-                hList.Insert(0, randomNumber);
-                while (hList.Count > HistoryCount)
-                {
-                    hList.RemoveAt(HistoryCount);
-                }
-                pickHistory = hList;
-                _txtSuggestion.Text = _list[randomNumber].Text;
-            }
-            catch
-            {
-                _btnSuggest.IsEnabled = false;
-            }
+            DoSelect();
         }
 
         //private void _btnList_Click(object sender, RoutedEventArgs e)
@@ -176,7 +159,7 @@ namespace SuggesterControls
             List<Suggestion> list = _storageHelper.GetList();
             if (list.Count == 0)
             {
-                list = ReadResourceFile("LameSuggester.SampleData." + Path.GetFileNameWithoutExtension(_fileName) + ".txt");
+                list = ReadResourceFile("SuggesterControls.SampleData." + Path.GetFileNameWithoutExtension(_fileName) + ".txt");
                 _storageHelper.SaveList(list);
             }
             return list;
@@ -186,8 +169,9 @@ namespace SuggesterControls
         {
             var rVal = new List<Suggestion>();
             int lineNumber = 1;
-            using (Stream stream = Assembly.GetExecutingAssembly()
-                               .GetManifestResourceStream(fileName))
+            var ass = Assembly.GetExecutingAssembly();
+            //var qqq = ass.get
+            using (Stream stream = ass.GetManifestResourceStream(fileName))
             {
                 using (StreamReader reader = new StreamReader(stream))
                 {
@@ -215,5 +199,31 @@ namespace SuggesterControls
         //}
 
 
+
+        public void DoSelect()
+        {
+            try
+            {
+                ensureList();
+                List<int> hList = pickHistory;
+                Random random = new Random();
+                int randomNumber;
+                do
+                {
+                    randomNumber = random.Next(0, _list.Length);
+                } while (hList.Contains(randomNumber));
+                hList.Insert(0, randomNumber);
+                while (hList.Count > HistoryCount)
+                {
+                    hList.RemoveAt(HistoryCount);
+                }
+                pickHistory = hList;
+                _txtSuggestion.Text = _list[randomNumber].Text;
+            }
+            catch
+            {
+                _btnSuggest.IsEnabled = false;
+            }
+        }
     }
 }

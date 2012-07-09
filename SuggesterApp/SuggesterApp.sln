@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuggesterTools", "Suggester
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuggesterControls", "SuggesterControls\SuggesterControls.csproj", "{6A91E946-8B07-4278-BA6A-64785E3D72A6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuggesterAppTest", "SuggesterAppTest\SuggesterAppTest.csproj", "{6B65A02A-6ECC-4D37-BB84-277B9357F45B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,12 @@ Global
 		{6A91E946-8B07-4278-BA6A-64785E3D72A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6A91E946-8B07-4278-BA6A-64785E3D72A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6A91E946-8B07-4278-BA6A-64785E3D72A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B65A02A-6ECC-4D37-BB84-277B9357F45B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B65A02A-6ECC-4D37-BB84-277B9357F45B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B65A02A-6ECC-4D37-BB84-277B9357F45B}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{6B65A02A-6ECC-4D37-BB84-277B9357F45B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B65A02A-6ECC-4D37-BB84-277B9357F45B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B65A02A-6ECC-4D37-BB84-277B9357F45B}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
