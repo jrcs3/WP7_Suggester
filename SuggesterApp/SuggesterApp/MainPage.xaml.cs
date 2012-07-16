@@ -26,16 +26,11 @@ namespace SuggesterApp
         {
             InitializeComponent();
 
-
-            //addMakeSuggestionCtlToPanorama(_basePanorama, ApplicationBar, "girl's names", "FemaleName.xml", "girl's names", "girl's name", 25);
-            //addMakeSuggestionCtlToPanorama(_basePanorama, ApplicationBar, "boy's names", "MaleName.xml", "boy's names", "boy's name", 25);
-            //addMakeSuggestionCtlToPanorama(_basePanorama, ApplicationBar, "professions", "Profession.xml", "professions", "profession", 25);
             addMakeSuggestionCtlToPanorama(_basePanorama, ApplicationBar, "objects", "Object.xml", "objects", "object", 20);
             addMakeSuggestionCtlToPanorama(_basePanorama, ApplicationBar, "locations", "Location.xml", "locations", "location", 20);
             addMakeSuggestionCtlToPanorama(_basePanorama, ApplicationBar, "adjectives", "Adjective.xml", "adjectives", "adjective", 20);
             addMakeSuggestionCtlToPanorama(_basePanorama, ApplicationBar, "emotions", "Emotions.txt", "emotions", "emotions", 45);
             addMakeSuggestionCtlToPanorama(_basePanorama, ApplicationBar, "relationships", "Relationship.txt", "relationships", "relationship", 15);
-            //addMakeSuggestionCtlToPanorama(_basePanorama, ApplicationBar, "magic 8 ball", "Magic8.xml", "answers", "answer", 1);
 
             _shakeSensor.ShakeDetected += ShakeDetected;
             _shakeSensor.Start();
@@ -56,6 +51,7 @@ namespace SuggesterApp
                 SingularName = singularName,
                 HistoryCount = historyCount                
             };
+            sug.DoSelect();
             //sug.ClickList += clickListMethod;
             //sug.FocusToMe += gotFocusMethod;
             item.Content = sug;

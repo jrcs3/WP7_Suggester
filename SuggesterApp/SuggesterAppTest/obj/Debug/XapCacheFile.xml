@@ -1,10 +1,12 @@
-﻿<xapCache source="C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterAppTest\Bin\Debug\SuggesterAppTest.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="7/8/2012 7:18:47 PM">
+﻿<xapCache source="C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterAppTest\Bin\Debug\SuggesterAppTest.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="7/15/2012 11:04:08 AM">
   <file source="C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterAppTest\Bin\Debug\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="6/30/2012 7:41:59 AM" />
   <file source="C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterAppTest\Background.png" archivePath="Background.png" lastWriteTime="6/30/2012 7:34:58 AM" />
   <file source="C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterAppTest\ApplicationIcon.png" archivePath="ApplicationIcon.png" lastWriteTime="6/30/2012 7:34:58 AM" />
-  <file source="C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterAppTest\obj\Debug\SuggesterAppTest.dll" archivePath="SuggesterAppTest.dll" lastWriteTime="7/8/2012 7:18:46 PM" />
+  <file source="C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterAppTest\obj\Debug\SuggesterAppTest.dll" archivePath="SuggesterAppTest.dll" lastWriteTime="7/15/2012 11:04:07 AM" />
+  <file source="C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\Lists\Bin\Debug\Lists.dll" archivePath="Lists.dll" lastWriteTime="7/15/2012 11:04:06 AM" />
   <file source="C:\Users\jack\Documents\Visual Studio 2010\Test\bin\Microsoft.Silverlight.Testing.dll" archivePath="Microsoft.Silverlight.Testing.dll" lastWriteTime="5/24/2010 11:28:56 AM" />
   <file source="C:\Users\jack\Documents\Visual Studio 2010\Test\bin\Microsoft.VisualStudio.QualityTools.UnitTesting.Silverlight.dll" archivePath="Microsoft.VisualStudio.QualityTools.UnitTesting.Silverlight.dll" lastWriteTime="5/24/2010 11:28:54 AM" />
+  <file source="C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterTools\Bin\Debug\SuggesterTools.dll" archivePath="SuggesterTools.dll" lastWriteTime="7/15/2012 11:04:06 AM" />
   <file source="C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterAppTest\SplashScreenImage.jpg" archivePath="SplashScreenImage.jpg" lastWriteTime="6/30/2012 7:34:58 AM" />
-  <file source="C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterAppTest\Bin\Debug\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="7/8/2012 7:18:47 PM" />
+  <file source="C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterAppTest\Bin\Debug\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="7/15/2012 9:15:00 AM" />
 </xapCache>

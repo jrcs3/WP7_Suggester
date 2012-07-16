@@ -108,16 +108,13 @@
     <Content Include="Images\settings.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <EmbeddedResource Include="SampleData\Adjective.txt" />
-    <EmbeddedResource Include="SampleData\FemaleName.txt" />
-    <EmbeddedResource Include="SampleData\Location.txt" />
-    <EmbeddedResource Include="SampleData\Magic8.txt" />
-    <EmbeddedResource Include="SampleData\MaleName.txt" />
-    <EmbeddedResource Include="SampleData\Object.txt" />
-    <EmbeddedResource Include="SampleData\Profession.txt" />
     <Content Include="SplashScreenImage.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Lists\Lists.csproj">
+      <Project>{703F8C44-175F-46AA-A76F-C53AC90C7199}</Project>
+      <Name>Lists</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SuggesterControls\SuggesterControls.csproj">
       <Project>{6A91E946-8B07-4278-BA6A-64785E3D72A6}</Project>
       <Name>SuggesterControls</Name>

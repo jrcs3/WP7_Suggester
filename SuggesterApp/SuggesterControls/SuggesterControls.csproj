@@ -71,33 +71,6 @@
       <Name>SuggesterTools</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="SampleData\Adjective.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="SampleData\FemaleName.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="SampleData\Location.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="SampleData\Magic8.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="SampleData\MaleName.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="SampleData\Object.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="SampleData\Profession.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="SampleData\Emotions.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="SampleData\Relationship.txt" />
-  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.CSharp.targets" />
   <ProjectExtensions />

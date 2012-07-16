@@ -24,7 +24,8 @@ namespace SuggesterControls
         {
             InitializeComponent();
 
-            _txtSuggestion.Text = string.Empty;
+            //_txtSuggestion.Text = string.Empty;
+            DoSelect();
         }
         private StorageHelper<Suggestion> _storageHelper;
         private Suggestion[] _list;
@@ -43,6 +44,7 @@ namespace SuggesterControls
                 if (string.IsNullOrWhiteSpace(_txtSuggestion.Text))
                 {
                     _txtSuggestion.Text = "First " + _singularName;
+                    //DoSelect();
                 }
             }
         }
@@ -131,7 +133,7 @@ namespace SuggesterControls
                     }
                     _listValid = true;
                 }
-                catch (Exception)
+                catch (Exception ex)
                 {
                     _btnSuggest.IsEnabled = false;
                 }
@@ -143,62 +145,17 @@ namespace SuggesterControls
             DoSelect();
         }
 
-        //private void _btnList_Click(object sender, RoutedEventArgs e)
-        //{
-        //    if (ClickList != null)
-        //    {
-        //        _btnSuggest.IsEnabled = true;
-        //        _listValid = false;
-        //        ClickList(this, EventArgs.Empty);
-        //    }
-        //}
-
-
         private List<Suggestion> getSuggestionList()
         {
             List<Suggestion> list = _storageHelper.GetList();
             if (list.Count == 0)
             {
-                list = ReadResourceFile("SuggesterControls.SampleData." + Path.GetFileNameWithoutExtension(_fileName) + ".txt");
+                //list = ReadResourceFile("SuggesterControls.SampleData." + Path.GetFileNameWithoutExtension(_fileName) + ".txt");
+                list = ListHelper.ReadResourceFile("Lists", Path.GetFileNameWithoutExtension(_fileName) + ".txt");
                 _storageHelper.SaveList(list);
             }
             return list;
         }
-
-        private static List<Suggestion> ReadResourceFile(string fileName)
-        {
-            var rVal = new List<Suggestion>();
-            int lineNumber = 1;
-            var ass = Assembly.GetExecutingAssembly();
-            //var qqq = ass.get
-            using (Stream stream = ass.GetManifestResourceStream(fileName))
-            {
-                using (StreamReader reader = new StreamReader(stream))
-                {
-                    while (reader.Peek() >= 0)
-                    {
-                        string line = reader.ReadLine();
-                        if (!string.IsNullOrWhiteSpace(line))
-                        {
-                            rVal.Add(new Suggestion(lineNumber++, line));
-                        }
-                    }
-                    //string result = reader.ReadToEnd();
-                }
-            }
-
-            return rVal;
-        }
-
-        //private void UserControl_GotFocus(object sender, RoutedEventArgs e)
-        //{
-        //    if (FocusToMe != null)
-        //    {
-        //        FocusToMe(this, EventArgs.Empty);
-        //    }
-        //}
-
-
 
         public void DoSelect()
         {

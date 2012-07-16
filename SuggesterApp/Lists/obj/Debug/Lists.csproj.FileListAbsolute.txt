@@ -1,0 +1,4 @@
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\Lists\Bin\Debug\Lists.dll
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\Lists\Bin\Debug\Lists.pdb
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\Lists\obj\Debug\Lists.dll
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\Lists\obj\Debug\Lists.pdb
