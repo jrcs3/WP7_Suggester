@@ -63,12 +63,14 @@ namespace SuggesterApp
         // This code will not execute when the application is reactivated
         private void Application_Launching(object sender, LaunchingEventArgs e)
         {
+            DetermineIsTrial();
         }
 
         // Code to execute when the application is activated (brought to foreground)
         // This code will not execute when the application is first launched
         private void Application_Activated(object sender, ActivatedEventArgs e)
         {
+            DetermineIsTrial();
         }
 
         // Code to execute when the application is deactivated (sent to background)
@@ -138,5 +140,40 @@ namespace SuggesterApp
         }
 
         #endregion
+
+        public static bool IsTrial { get; private set; }
+
+        public static event EventHandler ApplicationActivated;
+        private void DetermineIsTrial()
+        {
+            bool newIsTrial = getIsTrilaFromLicenseInformation();
+            if (!newIsTrial &&  IsTrial)
+            {
+                if (ApplicationActivated != null)
+                {
+                    ApplicationActivated(new object(), EventArgs.Empty);
+                }
+            }
+            IsTrial = newIsTrial;
+        }
+        private static bool getIsTrilaFromLicenseInformation(){
+
+#if TRIAL            
+            return !_fakeActivated;
+#else
+            var license = new Microsoft.Phone.Marketplace.LicenseInformation();
+            return license.IsTrial();
+#endif
+        }    
+
+#if TRIAL
+        private static bool _fakeActivated = false;
+        public  void DoFakeActivete()
+        {
+            _fakeActivated = true;
+            DetermineIsTrial();
+        }
+#endif
+  
     }
 }

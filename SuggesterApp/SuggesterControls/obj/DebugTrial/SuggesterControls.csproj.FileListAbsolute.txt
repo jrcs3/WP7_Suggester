@@ -1,0 +1,15 @@
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterControls\bin\DebugTrial\SuggesterControls.dll
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterControls\bin\DebugTrial\SuggesterControls.pdb
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterControls\bin\DebugTrial\Microsoft.Expression.Controls.dll
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterControls\bin\DebugTrial\Microsoft.Phone.Controls.dll
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterControls\bin\DebugTrial\SuggesterTools.dll
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterControls\bin\DebugTrial\Microsoft.Expression.Drawing.dll
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterControls\bin\DebugTrial\SuggesterTools.pdb
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterControls\bin\DebugTrial\Microsoft.Expression.Controls.xml
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterControls\bin\DebugTrial\Microsoft.Phone.Controls.xml
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterControls\bin\DebugTrial\Microsoft.Expression.Drawing.xml
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterControls\obj\DebugTrial\SuggesterControls.csprojResolveAssemblyReference.cache
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterControls\obj\DebugTrial\MakeSuggestionCtl.g.i.cs
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterControls\obj\DebugTrial\SuggesterControls.g.resources
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterControls\obj\DebugTrial\SuggesterControls.dll
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterControls\obj\DebugTrial\SuggesterControls.pdb

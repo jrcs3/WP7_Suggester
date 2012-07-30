@@ -14,31 +14,44 @@ EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		DebugTrial|Any CPU = DebugTrial|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{58FE25AF-5EE7-48DC-A238-80A1ED0627DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{58FE25AF-5EE7-48DC-A238-80A1ED0627DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{58FE25AF-5EE7-48DC-A238-80A1ED0627DA}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{58FE25AF-5EE7-48DC-A238-80A1ED0627DA}.DebugTrial|Any CPU.ActiveCfg = DebugTrial|Any CPU
+		{58FE25AF-5EE7-48DC-A238-80A1ED0627DA}.DebugTrial|Any CPU.Build.0 = DebugTrial|Any CPU
+		{58FE25AF-5EE7-48DC-A238-80A1ED0627DA}.DebugTrial|Any CPU.Deploy.0 = DebugTrial|Any CPU
 		{58FE25AF-5EE7-48DC-A238-80A1ED0627DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{58FE25AF-5EE7-48DC-A238-80A1ED0627DA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{58FE25AF-5EE7-48DC-A238-80A1ED0627DA}.Release|Any CPU.Deploy.0 = Release|Any CPU
 		{32ACC255-AF26-423A-BCCC-0FDE5CA12B66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{32ACC255-AF26-423A-BCCC-0FDE5CA12B66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32ACC255-AF26-423A-BCCC-0FDE5CA12B66}.DebugTrial|Any CPU.ActiveCfg = DebugTrial|Any CPU
+		{32ACC255-AF26-423A-BCCC-0FDE5CA12B66}.DebugTrial|Any CPU.Build.0 = DebugTrial|Any CPU
 		{32ACC255-AF26-423A-BCCC-0FDE5CA12B66}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{32ACC255-AF26-423A-BCCC-0FDE5CA12B66}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6A91E946-8B07-4278-BA6A-64785E3D72A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6A91E946-8B07-4278-BA6A-64785E3D72A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A91E946-8B07-4278-BA6A-64785E3D72A6}.DebugTrial|Any CPU.ActiveCfg = DebugTrial|Any CPU
+		{6A91E946-8B07-4278-BA6A-64785E3D72A6}.DebugTrial|Any CPU.Build.0 = DebugTrial|Any CPU
 		{6A91E946-8B07-4278-BA6A-64785E3D72A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6A91E946-8B07-4278-BA6A-64785E3D72A6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6B65A02A-6ECC-4D37-BB84-277B9357F45B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6B65A02A-6ECC-4D37-BB84-277B9357F45B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6B65A02A-6ECC-4D37-BB84-277B9357F45B}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{6B65A02A-6ECC-4D37-BB84-277B9357F45B}.DebugTrial|Any CPU.ActiveCfg = DebugTrial|Any CPU
+		{6B65A02A-6ECC-4D37-BB84-277B9357F45B}.DebugTrial|Any CPU.Build.0 = DebugTrial|Any CPU
+		{6B65A02A-6ECC-4D37-BB84-277B9357F45B}.DebugTrial|Any CPU.Deploy.0 = DebugTrial|Any CPU
 		{6B65A02A-6ECC-4D37-BB84-277B9357F45B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6B65A02A-6ECC-4D37-BB84-277B9357F45B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6B65A02A-6ECC-4D37-BB84-277B9357F45B}.Release|Any CPU.Deploy.0 = Release|Any CPU
 		{703F8C44-175F-46AA-A76F-C53AC90C7199}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{703F8C44-175F-46AA-A76F-C53AC90C7199}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{703F8C44-175F-46AA-A76F-C53AC90C7199}.DebugTrial|Any CPU.ActiveCfg = DebugTrial|Any CPU
+		{703F8C44-175F-46AA-A76F-C53AC90C7199}.DebugTrial|Any CPU.Build.0 = DebugTrial|Any CPU
 		{703F8C44-175F-46AA-A76F-C53AC90C7199}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{703F8C44-175F-46AA-A76F-C53AC90C7199}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection

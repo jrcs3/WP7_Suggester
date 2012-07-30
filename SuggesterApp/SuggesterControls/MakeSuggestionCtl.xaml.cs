@@ -133,7 +133,7 @@ namespace SuggesterControls
                     }
                     _listValid = true;
                 }
-                catch (Exception ex)
+                catch
                 {
                     _btnSuggest.IsEnabled = false;
                 }
