@@ -1,0 +1,17 @@
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterAppTest\bin\DebugFakeStore\ApplicationIcon.png
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterAppTest\bin\DebugFakeStore\Background.png
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterAppTest\bin\DebugFakeStore\SuggesterAppTest.dll
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterAppTest\bin\DebugFakeStore\AppManifest.xaml
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterAppTest\bin\DebugFakeStore\SuggesterAppTest.xap
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterAppTest\bin\DebugFakeStore\Lists.dll
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterAppTest\bin\DebugFakeStore\Microsoft.Silverlight.Testing.dll
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterAppTest\bin\DebugFakeStore\Microsoft.VisualStudio.QualityTools.UnitTesting.Silverlight.dll
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterAppTest\bin\DebugFakeStore\SuggesterTools.dll
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterAppTest\bin\DebugFakeStore\Microsoft.Silverlight.Testing.pdb
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterAppTest\bin\DebugFakeStore\Microsoft.VisualStudio.QualityTools.UnitTesting.Silverlight.pdb
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterAppTest\obj\DebugFakeStore\SuggesterAppTest.csprojResolveAssemblyReference.cache
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterAppTest\obj\DebugFakeStore\App.g.i.cs
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterAppTest\obj\DebugFakeStore\MainPage.g.i.cs
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterAppTest\obj\DebugFakeStore\SuggesterAppTest.g.resources
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterAppTest\obj\DebugFakeStore\SuggesterAppTest.dll
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterAppTest\obj\DebugFakeStore\XapCacheFile.xml

@@ -1,0 +1,2 @@
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\Lists\bin\DebugFakeStore\Lists.dll
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\Lists\obj\DebugFakeStore\Lists.dll

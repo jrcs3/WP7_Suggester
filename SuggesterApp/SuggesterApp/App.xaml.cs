@@ -156,17 +156,19 @@ namespace SuggesterApp
             }
             IsTrial = newIsTrial;
         }
-        private static bool getIsTrilaFromLicenseInformation(){
-
-#if TRIAL            
+        private static bool getIsTrilaFromLicenseInformation()
+        {
+#if FAKESTORE
             return !_fakeActivated;
+#elif TRIAL
+            return true;
 #else
             var license = new Microsoft.Phone.Marketplace.LicenseInformation();
             return license.IsTrial();
 #endif
-        }    
+        }
 
-#if TRIAL
+#if FAKESTORE
         private static bool _fakeActivated = false;
         public  void DoFakeActivete()
         {

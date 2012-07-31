@@ -1,0 +1,12 @@
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterControls\bin\DebugFakeStore\SuggesterControls.dll
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterControls\bin\DebugFakeStore\Microsoft.Expression.Controls.dll
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterControls\bin\DebugFakeStore\Microsoft.Phone.Controls.dll
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterControls\bin\DebugFakeStore\SuggesterTools.dll
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterControls\bin\DebugFakeStore\Microsoft.Expression.Drawing.dll
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterControls\bin\DebugFakeStore\Microsoft.Expression.Controls.xml
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterControls\bin\DebugFakeStore\Microsoft.Phone.Controls.xml
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterControls\bin\DebugFakeStore\Microsoft.Expression.Drawing.xml
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterControls\obj\DebugFakeStore\SuggesterControls.csprojResolveAssemblyReference.cache
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterControls\obj\DebugFakeStore\MakeSuggestionCtl.g.i.cs
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterControls\obj\DebugFakeStore\SuggesterControls.g.resources
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterControls\obj\DebugFakeStore\SuggesterControls.dll

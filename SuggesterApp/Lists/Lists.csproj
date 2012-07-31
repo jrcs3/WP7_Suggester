@@ -49,6 +49,9 @@
     <PlatformTarget>AnyCPU</PlatformTarget>
     <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugFakeStore|AnyCPU'">
+    <OutputPath>bin\DebugFakeStore\</OutputPath>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System.Windows" />
     <Reference Include="system" />
