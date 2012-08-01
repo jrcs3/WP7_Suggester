@@ -1,5 +1,4 @@
 C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\bin\DebugFakeStore\ApplicationIcon.png
-C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\bin\DebugFakeStore\Background_bad.png
 C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\bin\DebugFakeStore\Images\add.png
 C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\bin\DebugFakeStore\Images\close.png
 C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\bin\DebugFakeStore\Images\edit.png
