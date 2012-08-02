@@ -10,7 +10,6 @@ C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterControls\Bin\
 C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterControls\Bin\Release\Microsoft.Expression.Drawing.xml
 C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterControls\obj\Release\SuggesterControls.csprojResolveAssemblyReference.cache
 C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterControls\obj\Release\MakeSuggestionCtl.g.i.cs
-C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterControls\obj\Release\TrialModeCtl.g.i.cs
 C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterControls\obj\Release\SuggesterControls.g.resources
 C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterControls\obj\Release\SuggesterControls.dll
 C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterControls\obj\Release\SuggesterControls.pdb
