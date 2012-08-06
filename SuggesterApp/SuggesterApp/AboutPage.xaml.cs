@@ -19,5 +19,10 @@ namespace SuggesterApp
         {
             InitializeComponent();
         }
+
+        private void _btnOk_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.GoBack();
+        }
     }
 }

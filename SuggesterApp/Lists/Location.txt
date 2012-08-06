@@ -44,7 +44,6 @@ Main Street
 Deep Space Nine
 control tower
 Grandma's house
-library
 Monster Island
 Skull Island
 University of Northern South Carolina
@@ -129,7 +128,6 @@ condominium
 her apartment
 pet store
 cyberspace
-kitchen
 football pitch
 batting cage
 locker room
@@ -199,3 +197,13 @@ roller rink
 Parlement
 museum
 hippie bus
+kitchen
+ballroom
+conservatory
+dining room
+cellar
+billiard room
+library
+lounge
+hall
+study

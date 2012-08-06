@@ -41,7 +41,7 @@ namespace SuggesterApp
             ApplicationBar.MenuItems.Add(newItem);
 
             addMakeSuggestionCtlToPanorama(_basePanorama, ApplicationBar, "adjectives", "Adjective.xml", "adjectives", "adjective", 50);
-            addMakeSuggestionCtlToPanorama(_basePanorama, ApplicationBar, "objects", "Object.xml", "objects", "object", 20);
+            addMakeSuggestionCtlToPanorama(_basePanorama, ApplicationBar, "objects", "Object.xml", "objects", "object", 50);
             if (App.IsTrial)
             {
                 addTrialModeCtlToPanorama(_basePanorama, ApplicationBar, TRIAL_MODE_MENU_TEXT);
@@ -50,7 +50,7 @@ namespace SuggesterApp
             {
                 addMakeSuggestionCtlToPanorama(_basePanorama, ApplicationBar, "locations", "Location.xml", "locations", "location", 75);
                 addMakeSuggestionCtlToPanorama(_basePanorama, ApplicationBar, "emotions", "Emotions.txt", "emotions", "emotions", 45);
-                addMakeSuggestionCtlToPanorama(_basePanorama, ApplicationBar, "relationships", "Relationship.txt", "relationships", "relationship", 15);
+                addMakeSuggestionCtlToPanorama(_basePanorama, ApplicationBar, "relationships", "Relationship.txt", "relationships", "relationship", 25);
             }
             _shakeSensor.ShakeDetected += ShakeDetected;
             _shakeSensor.Start();

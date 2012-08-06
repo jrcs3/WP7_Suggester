@@ -16,23 +16,31 @@
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="20" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
+        <TextBlock Text="Improv" Grid.Row="0" FontSize="48" TextAlignment="Center" FontWeight="Bold"/>
+        <TextBlock Text="Suggester" Grid.Row="1" FontSize="48" TextAlignment="Center" FontWeight="Bold"/>
+
         <!--TitlePanel contains the name of the application and page title-->
-        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
+        <!--<StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
             <TextBlock x:Name="ApplicationTitle" Text="Improv Suggester" Style="{StaticResource PhoneTextNormalStyle}"/>
             <TextBlock x:Name="PageTitle" Text="About" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
-        </StackPanel>
+        </StackPanel>-->
 
         <!--ContentPanel - place additional content here-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+        <Grid x:Name="ContentPanel" Grid.Row="3" Margin="12,0,12,0">
             <StackPanel>
+                <TextBlock FontSize="40" >About</TextBlock>
                 <TextBlock TextWrapping="Wrap">This is the greatest Improv Suggestion phone app to ever be created.</TextBlock>
                 <TextBlock TextWrapping="Wrap">My web site is www.jrcs3.com (I will figure out how to do hyperlinks before I ship the product).</TextBlock>
             </StackPanel>
         </Grid>
+        <Button Name="_btnOk" Grid.Row="4" Content="OK" Click="_btnOk_Click" />
     </Grid>
  
     <!--Sample code showing usage of ApplicationBar-->
