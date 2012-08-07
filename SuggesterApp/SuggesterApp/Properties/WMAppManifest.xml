@@ -1,6 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Deployment xmlns="http://schemas.microsoft.com/windowsphone/2009/deployment" AppPlatformVersion="7.1">
-  <App xmlns="" ProductID="{39aa8ebd-f9f2-480b-a5cb-ed0f7eed7466}" Title="Improv Suggester" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="SuggesterApp author" Description="Sample description" Publisher="SuggesterApp">
+  <App xmlns="" ProductID="{39aa8ebd-f9f2-480b-a5cb-ed0f7eed7466}" 
+       Title="Improv Suggester" 
+       RuntimeType="Silverlight" 
+       Version="1.0.0.0" 
+       Genre="apps.normal" 
+       Author="Jack Stephens" 
+       Description="Sample description" 
+       Publisher="Jack Stephens">
     <IconPath IsRelative="true" IsResource="false">ApplicationIcon.png</IconPath>
     <Capabilities>
       <!--<Capability Name="ID_CAP_GAMERSERVICES" />

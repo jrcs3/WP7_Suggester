@@ -34,13 +34,43 @@
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="3" Margin="12,0,12,0">
-            <StackPanel>
-                <TextBlock FontSize="40" >About</TextBlock>
-                <TextBlock TextWrapping="Wrap">This is the greatest Improv Suggestion phone app to ever be created.</TextBlock>
-                <TextBlock TextWrapping="Wrap">My web site is www.jrcs3.com (I will figure out how to do hyperlinks before I ship the product).</TextBlock>
-            </StackPanel>
+            <Grid >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="20" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="20" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <TextBlock TextAlignment="Center" FontSize="40" 
+                           Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" >About</TextBlock>
+                <Image Name="_imgIcon" Grid.Row="1" Source="Background.png" Height="173" Width="173" 
+                       Grid.Column="0" Grid.ColumnSpan="2"  />
+                <TextBlock TextWrapping="Wrap" Grid.Row="3" 
+                           Grid.Column="0" Grid.ColumnSpan="2" Name="_txtProductName" Text="Product" TextAlignment="Center" />
+                <TextBlock TextWrapping="Wrap" Grid.Row="4" 
+                           Grid.Column="0" Grid.ColumnSpan="2" Name="_txtProductCopyright" Text="Copyright" TextAlignment="Center" />
+                <TextBlock Grid.Row="5" Grid.Column="0" TextAlignment="Center" >Version</TextBlock>
+                <TextBlock TextWrapping="Wrap" Name="_lblVersion" 
+                           Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" TextAlignment="Center" Text="1.0.0.0" />
+                <TextBlock TextWrapping="Wrap" 
+                           Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2" >My web site is www.jrcs3.com (I will figure out how to do hyperlinks before I ship the product).</TextBlock>
+                <HyperlinkButton Content="Submit A Review" HorizontalAlignment="Center"
+                                 Name="_btnSubmitReview" VerticalAlignment="Top" 
+                                 Click="_btnSubmitReview_Click"  
+                                 Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="2"  />
+            </Grid>
         </Grid>
-        <Button Name="_btnOk" Grid.Row="4" Content="OK" Click="_btnOk_Click" />
+        <Button Name="_btnOk" Grid.Row="4" Content="OK" Click="_btnOk_Click" Padding="200,0" />
     </Grid>
  
     <!--Sample code showing usage of ApplicationBar-->

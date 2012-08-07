@@ -5,8 +5,6 @@ C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\Bin\Relea
 C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\Bin\Release\Images\list.png
 C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\Bin\Release\Images\save.png
 C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\Bin\Release\Images\settings.png
-C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\Bin\Release\SuggesterApp.dll
-C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\Bin\Release\SuggesterApp.pdb
 C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\Bin\Release\AppManifest.xaml
 C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\Bin\Release\SuggesterApp.xap
 C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\Bin\Release\Lists.dll
@@ -24,9 +22,11 @@ C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\Bin\Relea
 C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\obj\Release\SuggesterApp.csprojResolveAssemblyReference.cache
 C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\obj\Release\App.g.i.cs
 C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\obj\Release\MainPage.g.i.cs
-C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\obj\Release\SuggesterApp.g.resources
-C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\obj\Release\SuggesterApp.dll
-C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\obj\Release\SuggesterApp.pdb
 C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\obj\Release\XapCacheFile.xml
 C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\obj\Release\TrialModeCtl.g.i.cs
 C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\obj\Release\AboutPage.g.i.cs
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\Bin\Release\Improv Suggester.dll
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\Bin\Release\Improv Suggester.pdb
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\obj\Release\Improv Suggester.g.resources
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\obj\Release\Improv Suggester.dll
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\obj\Release\Improv Suggester.pdb

@@ -9,9 +9,9 @@ using System.Resources;
 [assembly: AssemblyTitle("SuggesterTools")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Jack Stephens")]
 [assembly: AssemblyProduct("SuggesterTools")]
-[assembly: AssemblyCopyright("Copyright ©  2012")]
+[assembly: AssemblyCopyright("Copyright © Jack Stephens 2012")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
