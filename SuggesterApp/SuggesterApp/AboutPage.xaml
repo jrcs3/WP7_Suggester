@@ -13,7 +13,6 @@
     mc:Ignorable="d" d:DesignHeight="768" d:DesignWidth="480"
     shell:SystemTray.IsVisible="True">
 
-    <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
@@ -23,26 +22,22 @@
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
-        <TextBlock Text="Improv" Grid.Row="0" FontSize="48" TextAlignment="Center" FontWeight="Bold"/>
-        <TextBlock Text="Suggester" Grid.Row="1" FontSize="48" TextAlignment="Center" FontWeight="Bold"/>
+        <TextBlock Text="Improv" Grid.Row="0" FontSize="48" TextAlignment="Center" 
+                   FontWeight="Bold"/>
+        <TextBlock Text="Suggester" Grid.Row="1" FontSize="48" TextAlignment="Center" 
+                   FontWeight="Bold"/>
 
-        <!--TitlePanel contains the name of the application and page title-->
-        <!--<StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock x:Name="ApplicationTitle" Text="Improv Suggester" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock x:Name="PageTitle" Text="About" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
-        </StackPanel>-->
-
-        <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="3" Margin="12,0,12,0">
             <Grid >
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
                     <RowDefinition Height="20" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="20" />
                     <RowDefinition Height="Auto" />
@@ -53,36 +48,36 @@
                 </Grid.ColumnDefinitions>
                 <TextBlock TextAlignment="Center" FontSize="40" 
                            Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" >About</TextBlock>
-                <Image Name="_imgIcon" Grid.Row="1" Source="Background.png" Height="173" Width="173" 
+                <Image Name="_imgIcon" Grid.Row="1" Source="Background.png" Height="173" 
+                       Width="173" 
                        Grid.Column="0" Grid.ColumnSpan="2"  />
                 <TextBlock TextWrapping="Wrap" Grid.Row="3" 
-                           Grid.Column="0" Grid.ColumnSpan="2" Name="_txtProductName" Text="Product" TextAlignment="Center" />
+                           Grid.Column="0" Grid.ColumnSpan="2" Name="_txtProductName" 
+                           Text="Product" TextAlignment="Center" FontSize="32" />
                 <TextBlock TextWrapping="Wrap" Grid.Row="4" 
-                           Grid.Column="0" Grid.ColumnSpan="2" Name="_txtProductCopyright" Text="Copyright" TextAlignment="Center" />
+                           Grid.Column="0" Grid.ColumnSpan="2" Name="_txtProductCopyright" 
+                           Text="Copyright" TextAlignment="Center" />
                 <TextBlock Grid.Row="5" Grid.Column="0" TextAlignment="Center" >Version</TextBlock>
                 <TextBlock TextWrapping="Wrap" Name="_lblVersion" 
-                           Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" TextAlignment="Center" Text="1.0.0.0" />
-                <TextBlock TextWrapping="Wrap" 
-                           Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2" >My web site is www.jrcs3.com (I will figure out how to do hyperlinks before I ship the product).</TextBlock>
+                           Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" 
+                           TextAlignment="Center" Text="1.0.0.0" />
+                <HyperlinkButton Content="improv.suggester@jrcs3.com" Grid.Row="7" 
+                                 Grid.Column="0" Grid.ColumnSpan="2" 
+                                 HorizontalAlignment="Center" x:Name="_lnkContactEmail"  
+                                 ScrollViewer.VerticalScrollBarVisibility="Visible"                                  
+                                 Click="_lnkContactEmail_Click" />
+                <HyperlinkButton Content="jrcs3.com/ImprovSuggester" Grid.Row="8" 
+                                 Grid.Column="0" Grid.ColumnSpan="2" 
+                                 HorizontalAlignment="Center" x:Name="_lnkWebSite"  
+                                 ScrollViewer.VerticalScrollBarVisibility="Visible"                                  
+                                 Click="_lnkWebSite_Click" />
                 <HyperlinkButton Content="Submit A Review" HorizontalAlignment="Center"
                                  Name="_btnSubmitReview" VerticalAlignment="Top" 
                                  Click="_btnSubmitReview_Click"  
-                                 Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="2"  />
+                                 Grid.Row="10" Grid.Column="0" Grid.ColumnSpan="2"  />
             </Grid>
         </Grid>
-        <Button Name="_btnOk" Grid.Row="4" Content="OK" Click="_btnOk_Click" Padding="200,0" />
+        <Button Name="_btnOk" Grid.Row="4" Content="OK" Click="_btnOk_Click" Width="185" />
     </Grid>
  
-    <!--Sample code showing usage of ApplicationBar-->
-    <!--<phone:PhoneApplicationPage.ApplicationBar>
-        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
-            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button1.png" Text="Button 1"/>
-            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button2.png" Text="Button 2"/>
-            <shell:ApplicationBar.MenuItems>
-                <shell:ApplicationBarMenuItem Text="MenuItem 1"/>
-                <shell:ApplicationBarMenuItem Text="MenuItem 2"/>
-            </shell:ApplicationBar.MenuItems>
-        </shell:ApplicationBar>
-    </phone:PhoneApplicationPage.ApplicationBar>-->
-
 </phone:PhoneApplicationPage>

@@ -4,6 +4,7 @@ using System.Windows;
 using System.Windows.Media.Imaging;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Tasks;
+using Microsoft.Phone.Shell;
 
 namespace SuggesterApp
 {
@@ -63,6 +64,28 @@ namespace SuggesterApp
         public Theme CurrentTheme
         {
             get { return (Visibility)Application.Current.Resources["PhoneLightThemeVisibility"] == Visibility.Visible ? Theme.Light : Theme.Dark; }
+        }
+
+        private void _lnkContactEmail_Click(object sender, RoutedEventArgs e)
+        {
+            //Create a new task
+            EmailComposeTask task = new EmailComposeTask();
+            //Add the current item’s EMail address
+            task.To = "improv.suggester@jrcs3.com";
+            //Just a little text for the message
+            task.Subject = "Improv Suggester Feedback";
+            //Launch the task
+            task.Show();
+        }
+
+        private void _lnkWebSite_Click(object sender, RoutedEventArgs e)
+        {
+            //Create a new task
+            WebBrowserTask task = new WebBrowserTask();
+            //Set URI to my web site
+            task.Uri = new Uri("http://www.jrcs3.com/ImprovSuggester");
+            //Launch the task
+            task.Show();
         }
     }
     public enum Theme
