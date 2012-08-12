@@ -1,10 +1,4 @@
 C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\Bin\Release\ApplicationIcon.png
-C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\Bin\Release\Images\add.png
-C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\Bin\Release\Images\close.png
-C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\Bin\Release\Images\edit.png
-C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\Bin\Release\Images\list.png
-C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\Bin\Release\Images\save.png
-C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\Bin\Release\Images\settings.png
 C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\Bin\Release\AppManifest.xaml
 C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\Bin\Release\SuggesterApp.xap
 C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\Bin\Release\Lists.dll

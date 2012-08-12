@@ -6,7 +6,7 @@
     mc:Ignorable="d"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
-    Foreground="{StaticResource PhoneForegroundBrush}"
+    Foreground="{StaticResource PhoneAccentBrush}"
     d:DesignHeight="480" d:DesignWidth="480">
 
     <Grid x:Name="LayoutRoot">
@@ -14,11 +14,15 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <TextBlock Name="_txtTitle" Text="_txtTitle" FontSize="40" />
-        <Button Name="_btnSuggest" Click="_btnSuggest_Click" Grid.Row="1">
+        <TextBlock Name="_txtTitle" Text="_txtTitle" 
+                   FontSize="40" />
+        <Button Name="_btnSuggest" Click="_btnSuggest_Click" Grid.Row="1"
+                BorderBrush="{StaticResource PhoneAccentBrush}">
             <TextBlock HorizontalAlignment="Center" 
-                   Name="_txtSuggestion" Text="_txtSuggestion" VerticalAlignment="Center" 
-                   FontSize="48" FontWeight="Bold" TextWrapping="Wrap" TextAlignment="Center" />
+                   Name="_txtSuggestion" Text="_txtSuggestion" 
+                   VerticalAlignment="Center" FontSize="48" 
+                   FontWeight="Bold" TextWrapping="Wrap" TextAlignment="Center"
+                   Foreground="{StaticResource PhoneForegroundBrush}" />
         </Button>
     </Grid>
 </UserControl>

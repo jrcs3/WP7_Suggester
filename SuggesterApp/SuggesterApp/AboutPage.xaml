@@ -23,9 +23,9 @@
         </Grid.RowDefinitions>
 
         <TextBlock Text="Improv" Grid.Row="0" FontSize="48" TextAlignment="Center" 
-                   FontWeight="Bold"/>
+                   FontWeight="Bold" Foreground="{StaticResource PhoneAccentBrush}"/>
         <TextBlock Text="Suggester" Grid.Row="1" FontSize="48" TextAlignment="Center" 
-                   FontWeight="Bold"/>
+                   FontWeight="Bold" Foreground="{StaticResource PhoneAccentBrush}"/>
 
         <Grid x:Name="ContentPanel" Grid.Row="3" Margin="12,0,12,0">
             <Grid >

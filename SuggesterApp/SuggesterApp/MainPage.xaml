@@ -10,7 +10,7 @@
     mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="696"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
-    Foreground="{StaticResource PhoneForegroundBrush}"
+    Foreground="{StaticResource PhoneAccentBrush}"
     SupportedOrientations="PortraitOrLandscape" Orientation="Portrait"
     shell:SystemTray.IsVisible="True">
 
@@ -21,8 +21,10 @@
             <RowDefinition Height="20" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <TextBlock Text="Improv" Grid.Row="0" FontSize="48" TextAlignment="Center" FontWeight="Bold"/>
-        <TextBlock Text="Suggester" Grid.Row="1" FontSize="48" TextAlignment="Center" FontWeight="Bold"/>
+        <TextBlock Text="Improv" Grid.Row="0" FontSize="48" TextAlignment="Center" 
+                   FontWeight="Bold" />
+        <TextBlock Text="Suggester" Grid.Row="1" FontSize="48" TextAlignment="Center" 
+                   FontWeight="Bold" />
 
         <controls:Panorama Name="_basePanorama" Grid.Row="3">
         </controls:Panorama>
