@@ -1,13 +1,4 @@
 C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\bin\DebugTrial\ApplicationIcon.png
-C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\bin\DebugTrial\Background_bad.png
-C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\bin\DebugTrial\Images\add.png
-C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\bin\DebugTrial\Images\close.png
-C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\bin\DebugTrial\Images\edit.png
-C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\bin\DebugTrial\Images\list.png
-C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\bin\DebugTrial\Images\save.png
-C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\bin\DebugTrial\Images\settings.png
-C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\bin\DebugTrial\SuggesterApp.dll
-C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\bin\DebugTrial\SuggesterApp.pdb
 C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\bin\DebugTrial\AppManifest.xaml
 C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\bin\DebugTrial\SuggesterApp.xap
 C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\bin\DebugTrial\Lists.dll
@@ -25,9 +16,11 @@ C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\bin\Debug
 C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\obj\DebugTrial\SuggesterApp.csprojResolveAssemblyReference.cache
 C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\obj\DebugTrial\App.g.i.cs
 C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\obj\DebugTrial\MainPage.g.i.cs
-C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\obj\DebugTrial\SuggesterApp.g.resources
-C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\obj\DebugTrial\SuggesterApp.dll
-C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\obj\DebugTrial\SuggesterApp.pdb
 C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\obj\DebugTrial\XapCacheFile.xml
 C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\obj\DebugTrial\TrialModeCtl.g.i.cs
 C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\obj\DebugTrial\AboutPage.g.i.cs
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\bin\DebugTrial\Improv Suggester.dll
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\bin\DebugTrial\Improv Suggester.pdb
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\obj\DebugTrial\Improv Suggester.g.resources
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\obj\DebugTrial\Improv Suggester.dll
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\obj\DebugTrial\Improv Suggester.pdb

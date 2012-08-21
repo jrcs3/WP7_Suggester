@@ -63,7 +63,7 @@ namespace SuggesterApp
             this.NavigationService.Navigate(new Uri("/AboutPage.xaml", UriKind.Relative));
         }
 
-        void App_ApplicationActivated(object sender, EventArgs e)
+        private void App_ApplicationActivated(object sender, EventArgs e)
         {
             //MessageBox.Show("Activated");
             executeUpgrade();

@@ -141,6 +141,7 @@ namespace SuggesterApp
 
         #endregion
 
+        #region IsTrial
         public static bool IsTrial { get; private set; }
 
         public static event EventHandler ApplicationActivated;
@@ -176,6 +177,6 @@ namespace SuggesterApp
             DetermineIsTrial();
         }
 #endif
-  
+        #endregion IsTrial
     }
 }

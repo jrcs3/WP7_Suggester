@@ -18,14 +18,10 @@
         <TextBlock Text="Trial Mode" FontSize="40" Grid.Row="0" />
         <StackPanel Grid.Row="1">
             <TextBlock             
-                TextWrapping="Wrap" >
-                Some filler text about trial mode and perhaps a games suggestion based on available lists.            
+                TextWrapping="Wrap" >This trial mode comes with two lists, adjectives &amp; objects.                    
             </TextBlock>
-            <TextBlock TextWrapping="Wrap">
-                I could include a list of lists available in full mode.
-            </TextBlock>
-            <TextBlock TextWrapping="Wrap">
-                Etc.
+            <TextBlock TextWrapping="Wrap">The full version will give you access locations, emotions, 
+                relationships &amp; any lists that I may add later.
             </TextBlock>
         </StackPanel>
         <Button Grid.Row="2" Name="_btnBuyNow" Click="_btnBuyNow_Click" >Buy now</Button>

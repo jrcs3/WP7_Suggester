@@ -1,13 +1,13 @@
-﻿<xapCache source="C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\Bin\Release\SuggesterApp.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="8/12/2012 9:22:29 AM">
+﻿<xapCache source="C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\Bin\Release\SuggesterApp.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="8/19/2012 9:42:15 PM">
   <file source="C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\Bin\Release\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="8/6/2012 8:45:14 PM" />
   <file source="C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\Background.png" archivePath="Background.png" lastWriteTime="8/1/2012 8:56:14 PM" />
   <file source="C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\ApplicationIcon.png" archivePath="ApplicationIcon.png" lastWriteTime="8/1/2012 9:01:35 PM" />
-  <file source="C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\obj\Release\Improv Suggester.dll" archivePath="Improv Suggester.dll" lastWriteTime="8/12/2012 9:22:28 AM" />
-  <file source="C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\Lists\Bin\Release\Lists.dll" archivePath="Lists.dll" lastWriteTime="8/12/2012 9:22:24 AM" />
+  <file source="C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\obj\Release\Improv Suggester.dll" archivePath="Improv Suggester.dll" lastWriteTime="8/19/2012 9:42:15 PM" />
+  <file source="C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\Lists\Bin\Release\Lists.dll" archivePath="Lists.dll" lastWriteTime="8/19/2012 9:42:11 PM" />
   <file source="c:\Program Files (x86)\Microsoft SDKs\Expression\Blend\Windows Phone\v7.1\Libraries\Microsoft.Expression.Controls.dll" archivePath="Microsoft.Expression.Controls.dll" lastWriteTime="8/17/2011 1:48:22 AM" />
   <file source="C:\Program Files (x86)\Microsoft SDKs\Windows Phone\v7.1\Libraries\Silverlight\Microsoft.Phone.Controls.dll" archivePath="Microsoft.Phone.Controls.dll" lastWriteTime="9/15/2011 3:36:26 PM" />
-  <file source="C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterControls\Bin\Release\SuggesterControls.dll" archivePath="SuggesterControls.dll" lastWriteTime="8/12/2012 9:22:25 AM" />
-  <file source="C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterTools\Bin\Release\SuggesterTools.dll" archivePath="SuggesterTools.dll" lastWriteTime="8/12/2012 9:22:23 AM" />
+  <file source="C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterControls\Bin\Release\SuggesterControls.dll" archivePath="SuggesterControls.dll" lastWriteTime="8/19/2012 9:42:12 PM" />
+  <file source="C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterTools\Bin\Release\SuggesterTools.dll" archivePath="SuggesterTools.dll" lastWriteTime="8/19/2012 9:42:10 PM" />
   <file source="c:\Program Files (x86)\Microsoft SDKs\Expression\Blend\Windows Phone\v7.1\Libraries\Microsoft.Expression.Drawing.dll" archivePath="Microsoft.Expression.Drawing.dll" lastWriteTime="8/17/2011 1:48:22 AM" />
   <file source="C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\SplashScreenImage.jpg" archivePath="SplashScreenImage.jpg" lastWriteTime="8/4/2012 11:14:00 AM" />
   <file source="C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\Bin\Release\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="8/12/2012 4:49:29 AM" />

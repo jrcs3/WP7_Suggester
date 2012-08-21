@@ -46,7 +46,7 @@ namespace SuggesterApp {
                 return;
             }
             _contentLoaded = true;
-            System.Windows.Application.LoadComponent(this, new System.Uri("/SuggesterApp;component/App.xaml", System.UriKind.Relative));
+            System.Windows.Application.LoadComponent(this, new System.Uri("/Improv%20Suggester;component/App.xaml", System.UriKind.Relative));
         }
     }
 }
