@@ -29,6 +29,7 @@ namespace SuggesterAppTest
 
         private void PhoneApplicationPage_Loaded(object sender, RoutedEventArgs e)
         {
+
             try
             {
                 SystemTray.IsVisible = false;

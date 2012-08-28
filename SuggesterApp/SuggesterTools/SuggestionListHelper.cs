@@ -37,11 +37,9 @@ namespace SuggesterTools
             }
         }
 
-        private static List<SuggestionList> loadSuggestionListFromStream(Stream stream)
+        private static List<SuggestionList> loadSuggestionListFromXml(XDocument doc)
         {
-            XDocument doc = XDocument.Load(stream);
             var listList = new List<SuggestionList>();
-
             foreach (var item in doc.Descendants("List"))
             {
                 var newItem = new SuggestionList
@@ -61,6 +59,34 @@ namespace SuggesterTools
                 listList.Add(newItem);
             }
             return listList;
+        }
+
+
+        private static List<SuggestionList> loadSuggestionListFromStream(Stream stream)
+        {
+            XDocument doc = XDocument.Load(stream);
+            return loadSuggestionListFromXml(doc);
+            //var listList = new List<SuggestionList>();
+
+            //foreach (var item in doc.Descendants("List"))
+            //{
+            //    var newItem = new SuggestionList
+            //    {
+            //        HeaderText = item.Element("HeaderText").Value,
+            //        ListName = item.Element("ListName").Value,
+            //        PluralName = item.Element("PluralName").Value,
+            //        SingularName = item.Element("SingularName").Value,
+            //        HistoryCount = int.Parse(item.Element("HistoryCount").Value),
+            //        ReadOnly = bool.Parse(item.Element("ReadOnly").Value),
+            //        ListSource = (ListSourceType)Enum.Parse(typeof(ListSourceType), item.Element("ListSource").Value, true),
+            //        SourceUri = item.Element("SourceUri").Value,
+            //        ListDate = DateTime.Parse(item.Element("ListDate").Value),
+            //        SortPriority = int.Parse(item.Element("SortPriority").Value),
+            //        IsVisible = bool.Parse(item.Element("IsVisible").Value)
+            //    };
+            //    listList.Add(newItem);
+            //}
+            //return listList;
         }
     }
 }

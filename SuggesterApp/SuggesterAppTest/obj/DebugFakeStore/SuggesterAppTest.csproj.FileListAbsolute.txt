@@ -15,3 +15,4 @@ C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterAppTest\obj\D
 C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterAppTest\obj\DebugFakeStore\SuggesterAppTest.g.resources
 C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterAppTest\obj\DebugFakeStore\SuggesterAppTest.dll
 C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterAppTest\obj\DebugFakeStore\XapCacheFile.xml
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterAppTest\bin\DebugFakeStore\Config.xml

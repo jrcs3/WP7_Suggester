@@ -13,4 +13,3 @@ C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterControls\obj\
 C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterControls\obj\Debug\SuggesterControls.g.resources
 C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterControls\obj\Debug\SuggesterControls.dll
 C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterControls\obj\Debug\SuggesterControls.pdb
-C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterControls\obj\Debug\TrialModeCtl.g.i.cs

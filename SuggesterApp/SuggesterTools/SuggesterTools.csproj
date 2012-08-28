@@ -67,10 +67,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccelerometerSensorWithShakeDetection.cs" />
+    <Compile Include="ColorMode.cs" />
     <Compile Include="ListHelper.cs" />
     <Compile Include="ListSourceType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StorageHelper.cs" />
+    <Compile Include="SuggesterAppConfig.cs" />
     <Compile Include="Suggestion.cs" />
     <Compile Include="SuggestionList.cs" />
     <Compile Include="SuggestionListHelper.cs" />

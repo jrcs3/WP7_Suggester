@@ -76,12 +76,13 @@
     <Reference Include="System.Net" />
     <Reference Include="System.Xml" />
     <Reference Include="mscorlib.extensions" />
+    <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="BasicTests.cs" />
+    <Compile Include="ConfigXmlTests.cs" />
     <Compile Include="ListTests.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
@@ -109,6 +110,7 @@
     <Content Include="Background.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <EmbeddedResource Include="Config.xml" />
     <Content Include="SplashScreenImage.jpg" />
   </ItemGroup>
   <ItemGroup>

@@ -11,6 +11,7 @@ using System.Windows.Shapes;
 using System.Collections.Generic;
 using System.Reflection;
 using System.IO;
+using System.Xml.Linq;
 
 namespace SuggesterTools
 {
@@ -51,6 +52,8 @@ namespace SuggesterTools
             }
             return list;
         }
+
+
 
         //static public string AssemblyDirectory
         //{
