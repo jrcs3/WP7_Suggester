@@ -53,18 +53,21 @@ namespace SuggesterTools
             return list;
         }
 
-
-
-        //static public string AssemblyDirectory
-        //{
-        //    get
-        //    {
-        //        string codeBase = Assembly.GetExecutingAssembly().CodeBase;
-        //        UriBuilder uri = new UriBuilder(codeBase);
-        //        string path = Uri.UnescapeDataString(uri.Path);
-        //        return Path.GetDirectoryName(path);
-        //    }
-        //}
+        public static SuggesterAppConfig GetSuggesterAppConfig(string assemblyname)
+        {
+            Assembly a = Assembly.Load(assemblyname);
+            SuggesterAppConfig list = new SuggesterAppConfig();
+            using (Stream stream = a.GetManifestResourceStream(getAssemblyFirstName(a) + "." + "Config.xml"))
+            {
+                using (StreamReader reader = new StreamReader(stream))
+                {
+                    string contents = reader.ReadToEnd();
+                    XDocument doc = XDocument.Parse(contents);
+                    list.LoadFromXml(doc);
+                }
+            }
+            return list;
+        }
 
         static public string getAssemblyFirstName(Assembly a)
         {

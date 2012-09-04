@@ -13,6 +13,7 @@ namespace SuggesterTools
 {
     public class SuggestionList
     {
+        public int Id { get; set; }
         public string HeaderText { get; set; }
         public string ListName { get; set; }
         public string PluralName { get; set; }
@@ -24,5 +25,10 @@ namespace SuggesterTools
         public DateTime ListDate { get; set; }
         public int SortPriority { get; set; }
         public bool IsVisible { get; set; }
+        public bool IsTrialList { get; set; }
+        public string IsVisiableString { get { return IsVisible ? "VISIBLE" : "Not Visible"; } }
+        public bool AllowEditing { get { return !ReadOnly; } }
+
+        public string FileName { get { return ListName + ".xml"; } }
     }
 }

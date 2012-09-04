@@ -33,6 +33,7 @@ namespace SuggesterControls
 
         private IsolatedStorageSettings _settings;
 
+        public int Id { get; set; }
 
         private string _singularName;
         public string SingularName

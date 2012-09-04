@@ -10,3 +10,4 @@ C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterControls\obj\
 C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterControls\obj\DebugFakeStore\MakeSuggestionCtl.g.i.cs
 C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterControls\obj\DebugFakeStore\SuggesterControls.g.resources
 C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterControls\obj\DebugFakeStore\SuggesterControls.dll
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterControls\obj\DebugFakeStore\ListSuggestionListsCtl.g.i.cs

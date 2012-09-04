@@ -14,6 +14,8 @@ using System.IO;
 using SuggesterTools;
 using System.Reflection;
 using System.Xml.Linq;
+using System.IO.IsolatedStorage;
+using System.Collections.Generic;
 
 
 namespace SuggesterAppTest
@@ -23,6 +25,7 @@ namespace SuggesterAppTest
     {
         private const string CONFIG_XML_FILE_NAME = "Config.xml";
         private const string RESOURCE_STREAM_FORMAT = "SuggesterAppTest.{0}";
+
 
         [TestMethod, Description("Read Color Mode")]
         public void ReadColorMode01()
@@ -45,7 +48,7 @@ namespace SuggesterAppTest
             }
         }
         [TestMethod, Description("Get List Count (expect 5)")]
-        public void ReadListContains5Items()
+        public void ReadListContains5Items01()
         {
             var config = new SuggesterAppConfig();
             using (Stream stream = getResoureFileStream(CONFIG_XML_FILE_NAME))
@@ -56,20 +59,110 @@ namespace SuggesterAppTest
         }
 
         [TestMethod]
-        public void CompareXml()
+        public void CompareXml01()
         {
-            var config = new SuggesterAppConfig();
+            SuggesterAppConfig config = new SuggesterAppConfig();
             using (Stream stream = getResoureFileStream(CONFIG_XML_FILE_NAME))
             {
-                var docA = XDocument.Load(stream);
+                XDocument docA = XDocument.Load(stream);
                 config.LoadFromXml(docA);
                 XDocument docB = config.ToXml();
-                //var docA = XDocument.Parse(@"<root xmlns:ns=""http://myNs""><ns:child>1</ns:child></root>");
-                //var docB = XDocument.Parse(@"<root><child xmlns=""http://myNs"">1</child></root>");
 
                 bool areEqual = areXmlDocsEqual(docA, docB);
                 Assert.IsTrue(areEqual);
             }
+        }
+
+        [TestMethod]
+        public void AddListToXml01()
+        {
+            SuggesterAppConfig config = new SuggesterAppConfig();
+            using (Stream stream = getResoureFileStream(CONFIG_XML_FILE_NAME))
+            {
+                config.LoadFromStream(stream);
+                int itemCountBefore = config.Lists.Count();
+                SuggestionList newList = new SuggestionList
+                {
+                    HeaderText = "New List",
+                    ListName = "New List",
+                    PluralName = "List Items",
+                    SingularName = "List Item",
+                    HistoryCount = 42,
+                    ReadOnly = false,
+                    ListSource = ListSourceType.SkyDrive,
+                    SourceUri = "foo/list.txt",
+                    ListDate = DateTime.Today,
+                    SortPriority = 100,
+                    IsVisible = false
+                };
+                config.Lists.Add(newList);
+                int itemCountAfter = config.Lists.Count();
+                Assert.AreEqual(itemCountBefore + 1, itemCountAfter);
+            }
+        }
+
+        [TestMethod]
+        public void RemoveFromListToXml01()
+        {
+            SuggesterAppConfig config = new SuggesterAppConfig();
+            using (Stream stream = getResoureFileStream(CONFIG_XML_FILE_NAME))
+            {
+                config.LoadFromStream(stream);
+                int itemCountBefore = config.Lists.Count();
+                SuggestionList doomedList = config.Lists[2];
+                config.Lists.Remove(doomedList);
+                int itemCountAfter = config.Lists.Count();
+                Assert.AreEqual(itemCountBefore - 1, itemCountAfter);
+            }
+        }
+
+        [TestMethod]
+        public void IsInISBeforeAndAfterSave01()
+        {
+            SuggesterAppConfig config = new SuggesterAppConfig();
+            if (SuggesterAppConfig.IsInOS())
+            {
+                IsolatedStorageFile isoStorage = IsolatedStorageFile.GetUserStoreForApplication();
+                isoStorage.DeleteFile(config.GetFileName());
+            }
+            Assert.IsFalse(SuggesterAppConfig.IsInOS());
+            using (Stream stream = getResoureFileStream(CONFIG_XML_FILE_NAME))
+            {
+                config.LoadFromStream(stream);
+                config.SaveXmlToFileInIS();
+                Assert.IsTrue(SuggesterAppConfig.IsInOS());
+            }
+        }
+
+        [TestMethod]
+        public void LoadListFromIS01()
+        {
+            SuggesterAppConfig config = new SuggesterAppConfig();
+            if (!SuggesterAppConfig.IsInOS())
+            {
+                using (Stream stream = getResoureFileStream(CONFIG_XML_FILE_NAME))
+                {
+                    config.LoadFromStream(stream);
+                    config.SaveXmlToFileInIS();
+                }
+            }
+            bool loaded = config.LoadSuggestionListFromIS();
+            Assert.IsTrue(loaded);
+        }
+
+        [TestMethod]
+        public void LoadListFromResources01()
+        {
+            SuggesterAppConfig config = new SuggesterAppConfig();
+            bool loaded = config.LoadSuggestionListFromResources();
+            Assert.IsTrue(loaded);
+        }
+
+        [TestMethod]
+        public void LoadListFromResources()
+        {
+            SuggesterAppConfig list = ListHelper.GetSuggesterAppConfig("Lists");
+            Assert.AreEqual(ColorMode.Traditional, list.ColorMode);
         }
 
         private static bool areXmlDocsEqual(XDocument docA, XDocument docB)

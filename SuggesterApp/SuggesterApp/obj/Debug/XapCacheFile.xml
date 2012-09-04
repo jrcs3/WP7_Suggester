@@ -1,14 +1,26 @@
-﻿<xapCache source="C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\Bin\Debug\SuggesterApp.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="8/27/2012 9:05:58 PM">
+﻿<xapCache source="C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\Bin\Debug\SuggesterApp.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="9/4/2012 6:50:41 AM">
   <file source="C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\Bin\Debug\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="8/27/2012 7:22:41 PM" />
   <file source="C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\Background.png" archivePath="Background.png" lastWriteTime="8/1/2012 8:56:14 PM" />
   <file source="C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\ApplicationIcon.png" archivePath="ApplicationIcon.png" lastWriteTime="8/1/2012 9:01:35 PM" />
-  <file source="C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\obj\Debug\Improv Suggester.dll" archivePath="Improv Suggester.dll" lastWriteTime="8/27/2012 9:05:58 PM" />
-  <file source="C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\Lists\Bin\Debug\Lists.dll" archivePath="Lists.dll" lastWriteTime="8/27/2012 7:22:36 PM" />
+  <file source="C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\obj\Debug\Improv Suggester.dll" archivePath="Improv Suggester.dll" lastWriteTime="9/4/2012 6:50:41 AM" />
+  <file source="C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\Lists\Bin\Debug\Lists.dll" archivePath="Lists.dll" lastWriteTime="9/4/2012 6:50:39 AM" />
   <file source="c:\Program Files (x86)\Microsoft SDKs\Expression\Blend\Windows Phone\v7.1\Libraries\Microsoft.Expression.Controls.dll" archivePath="Microsoft.Expression.Controls.dll" lastWriteTime="8/17/2011 1:48:22 AM" />
   <file source="C:\Program Files (x86)\Microsoft SDKs\Windows Phone\v7.1\Libraries\Silverlight\Microsoft.Phone.Controls.dll" archivePath="Microsoft.Phone.Controls.dll" lastWriteTime="9/15/2011 3:36:26 PM" />
-  <file source="C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterControls\Bin\Debug\SuggesterControls.dll" archivePath="SuggesterControls.dll" lastWriteTime="8/27/2012 9:05:56 PM" />
-  <file source="C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterTools\Bin\Debug\SuggesterTools.dll" archivePath="SuggesterTools.dll" lastWriteTime="8/27/2012 9:05:56 PM" />
+  <file source="C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterControls\Bin\Debug\SuggesterControls.dll" archivePath="SuggesterControls.dll" lastWriteTime="9/4/2012 5:45:02 AM" />
+  <file source="C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterTools\Bin\Debug\SuggesterTools.dll" archivePath="SuggesterTools.dll" lastWriteTime="9/4/2012 5:45:01 AM" />
   <file source="c:\Program Files (x86)\Microsoft SDKs\Expression\Blend\Windows Phone\v7.1\Libraries\Microsoft.Expression.Drawing.dll" archivePath="Microsoft.Expression.Drawing.dll" lastWriteTime="8/17/2011 1:48:22 AM" />
+  <file source="C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\Images\add.png" archivePath="Images\add.png" lastWriteTime="5/27/2012 10:54:58 AM" />
+  <file source="C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\Images\close.png" archivePath="Images\close.png" lastWriteTime="5/27/2012 10:54:58 AM" />
+  <file source="C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\Images\edit.png" archivePath="Images\edit.png" lastWriteTime="5/27/2012 10:54:58 AM" />
+  <file source="C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\Images\list.png" archivePath="Images\list.png" lastWriteTime="5/27/2012 10:54:58 AM" />
+  <file source="C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\Images\save.png" archivePath="Images\save.png" lastWriteTime="5/27/2012 10:54:58 AM" />
+  <file source="C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\Images\settings.png" archivePath="Images\settings.png" lastWriteTime="5/27/2012 10:54:58 AM" />
   <file source="C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\SplashScreenImage.jpg" archivePath="SplashScreenImage.jpg" lastWriteTime="8/4/2012 11:14:00 AM" />
-  <file source="C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\Bin\Debug\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="8/27/2012 7:22:41 PM" />
+  <file source="C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\Bin\Debug\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="9/4/2012 5:45:05 AM" />
+  <file source="C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\Bin\Debug\Images\add.png" archivePath="Images\add.png" lastWriteTime="5/27/2012 10:54:58 AM" />
+  <file source="C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\Bin\Debug\Images\close.png" archivePath="Images\close.png" lastWriteTime="5/27/2012 10:54:58 AM" />
+  <file source="C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\Bin\Debug\Images\edit.png" archivePath="Images\edit.png" lastWriteTime="5/27/2012 10:54:58 AM" />
+  <file source="C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\Bin\Debug\Images\list.png" archivePath="Images\list.png" lastWriteTime="5/27/2012 10:54:58 AM" />
+  <file source="C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\Bin\Debug\Images\save.png" archivePath="Images\save.png" lastWriteTime="5/27/2012 10:54:58 AM" />
+  <file source="C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\Bin\Debug\Images\settings.png" archivePath="Images\settings.png" lastWriteTime="5/27/2012 10:54:58 AM" />
 </xapCache>

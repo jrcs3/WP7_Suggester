@@ -110,7 +110,9 @@
     <Content Include="Background.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <EmbeddedResource Include="Config.xml" />
+    <EmbeddedResource Include="Config.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <Content Include="SplashScreenImage.jpg" />
   </ItemGroup>
   <ItemGroup>

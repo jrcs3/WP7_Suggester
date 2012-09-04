@@ -3,6 +3,7 @@
   <ColorMode>Traditional</ColorMode>
   <Lists>
     <List>
+      <Id>1</Id>
       <HeaderText>objects</HeaderText>
       <ListName>Object</ListName>
       <PluralName>objects</PluralName>
@@ -14,8 +15,10 @@
       <ListDate>2012-07-21T00:00:00</ListDate>
       <SortPriority>1</SortPriority>
       <IsVisible>true</IsVisible>
+      <IsTrialList>true</IsTrialList>
     </List>
     <List>
+      <Id>2</Id>
       <HeaderText>locations</HeaderText>
       <ListName>Location</ListName>
       <PluralName>locations</PluralName>
@@ -27,8 +30,10 @@
       <ListDate>2012-07-11T00:00:00</ListDate>
       <SortPriority>2</SortPriority>
       <IsVisible>true</IsVisible>
+      <IsTrialList>true</IsTrialList>
     </List>
     <List>
+      <Id>3</Id>
       <HeaderText>adjectives</HeaderText>
       <ListName>Adjective</ListName>
       <PluralName>adjectives</PluralName>
@@ -40,8 +45,10 @@
       <ListDate>2012-07-11T00:00:00</ListDate>
       <SortPriority>3</SortPriority>
       <IsVisible>true</IsVisible>
+      <IsTrialList>false</IsTrialList>
     </List>
     <List>
+      <Id>4</Id>
       <HeaderText>emotions</HeaderText>
       <ListName>Emotions</ListName>
       <PluralName>emotions</PluralName>
@@ -53,8 +60,10 @@
       <ListDate>2012-07-11T00:00:00</ListDate>
       <SortPriority>4</SortPriority>
       <IsVisible>true</IsVisible>
+      <IsTrialList>false</IsTrialList>
     </List>
     <List>
+      <Id>5</Id>
       <HeaderText>relationships</HeaderText>
       <ListName>Relationship</ListName>
       <PluralName>relationships</PluralName>
@@ -66,6 +75,7 @@
       <ListDate>2012-07-11T00:00:00</ListDate>
       <SortPriority>5</SortPriority>
       <IsVisible>true</IsVisible>
+      <IsTrialList>false</IsTrialList>
     </List>
   </Lists>
 </Config>

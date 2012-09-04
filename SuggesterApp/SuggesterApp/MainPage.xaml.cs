@@ -16,16 +16,16 @@ using SuggesterTools;
 using System.IO;
 using System.Reflection;
 using System.Xml.Linq;
+using System.Windows.Navigation;
 
 namespace SuggesterApp
 {
     public partial class MainPage : PhoneApplicationPage
     {
         private AccelerometerSensorWithShakeDetection _shakeSensor = new AccelerometerSensorWithShakeDetection();
-
         private const string TRIAL_MODE_MENU_TEXT = "Trial Mode";
-
         private static bool _wasTrialMode = false;
+        //private static ColorMode _colorMode = ColorMode.Traditional;
 
         // Constructor
         public MainPage()
@@ -40,22 +40,42 @@ namespace SuggesterApp
             newItem.Click += navigateAbout; // 
             ApplicationBar.MenuItems.Add(newItem);
 
-            addMakeSuggestionCtlToPanorama(_basePanorama, ApplicationBar, "adjectives", "Adjective.xml", "adjectives", "adjective", 50);
-            addMakeSuggestionCtlToPanorama(_basePanorama, ApplicationBar, "objects", "Object.xml", "objects", "object", 50);
-            if (App.IsTrial)
+            App.Config = new SuggesterAppConfig();
+            if (SuggesterAppConfig.IsInOS())
             {
-                addTrialModeCtlToPanorama(_basePanorama, ApplicationBar, TRIAL_MODE_MENU_TEXT);
+                App.Config.LoadSuggestionListFromIS();
             }
             else
             {
-                addMakeSuggestionCtlToPanorama(_basePanorama, ApplicationBar, "locations", "Location.xml", "locations", "location", 75);
-                addMakeSuggestionCtlToPanorama(_basePanorama, ApplicationBar, "emotions", "Emotions.txt", "emotions", "emotions", 45);
-                addMakeSuggestionCtlToPanorama(_basePanorama, ApplicationBar, "relationships", "Relationship.txt", "relationships", "relationship", 25);
+                App.Config.LoadSuggestionListFromResources();
+                App.Config.SaveXmlToFileInIS();
             }
+            List<SuggestionList> listOfLists = App.Config.Lists;
+            if (!App.IsTrial)
+            {
+                foreach (SuggestionList list in listOfLists.Where(lol => lol.IsVisible).OrderBy(lol => lol.SortPriority))
+                {
+                    loadSuggestionListToUI(_basePanorama, ApplicationBar, newItem_Click, list);
+                }
+            }
+            else
+            {
+                foreach (SuggestionList list in listOfLists.Where(lol => lol.IsTrialList).OrderBy(lol => lol.SortPriority))
+                {
+                    loadSuggestionListToUI(_basePanorama, ApplicationBar, newItem_Click, list);
+                }
+                addTrialModeCtlToPanorama(_basePanorama, ApplicationBar, TRIAL_MODE_MENU_TEXT);
+            }
+                
             _shakeSensor.ShakeDetected += ShakeDetected;
             _shakeSensor.Start();
 
             App.ApplicationActivated += new EventHandler(App_ApplicationActivated);
+        }
+
+        private static void loadSuggestionListToUI(Panorama para, IApplicationBar appBar, EventHandler newItemClick, SuggestionList li)
+        {
+            addMakeSuggestionCtlToPanorama(para, appBar, li.Id, li.HeaderText, li.ListName + ".xml", li.PluralName, li.SingularName, li.HistoryCount, newItemClick);
         }
 
         private void navigateAbout(object sender, EventArgs e)
@@ -65,7 +85,6 @@ namespace SuggesterApp
 
         private void App_ApplicationActivated(object sender, EventArgs e)
         {
-            //MessageBox.Show("Activated");
             executeUpgrade();
         }
 
@@ -73,7 +92,6 @@ namespace SuggesterApp
         {
             var item = new PanoramaItem
             {
-                //Header = "Trial Mode",               
                 FontSize = 42
             };
             var tmc = new TrialModeCtl();
@@ -88,24 +106,21 @@ namespace SuggesterApp
             newItem.Click += newItem_Click;
             applicationBar.MenuItems.Add(newItem);
         }
-        private MakeSuggestionCtl addMakeSuggestionCtlToPanorama(Panorama para, IApplicationBar applicationBar, string header, string fileName, string pluralName, string singularName, int historyCount)
-        {
-            //EventHandler gotFocusMethod = _suggester_GotFocus;
+        private static MakeSuggestionCtl addMakeSuggestionCtlToPanorama(Panorama para, IApplicationBar applicationBar, int id, string header, string fileName, string pluralName, string singularName, int historyCount, EventHandler newItemClick)
+        {            
             var item = new PanoramaItem
             {
-                //Header = header,               
                 FontSize = 42
             };
             var sug = new MakeSuggestionCtl
             {
+                Id = id,
                 FileName = fileName,
                 PluralName = pluralName,
                 SingularName = singularName,
                 HistoryCount = historyCount                
             };
             sug.DoSelect();
-            //sug.ClickList += clickListMethod;
-            //sug.FocusToMe += gotFocusMethod;
             item.Content = sug;
             para.Items.Add(item);
 
@@ -115,7 +130,7 @@ namespace SuggesterApp
                 MyMakeSuggestionCtl = sug,
                 MyPanoramaItem = item
             };
-            newItem.Click += newItem_Click;
+            newItem.Click += newItemClick;
             applicationBar.MenuItems.Add(newItem);
 
             return sug;
@@ -124,7 +139,6 @@ namespace SuggesterApp
         private void ListSuggestions_Click(object sender, EventArgs e)
         {
             PanoramaItem si = (PanoramaItem)_basePanorama.SelectedItem;
-            //Console.WriteLine(si.ToString());
             var s = si.Content as MakeSuggestionCtl;
             if (s != null)
             {
@@ -173,7 +187,6 @@ namespace SuggesterApp
                     s.DoSelect();
                 }
                 System.Diagnostics.Debug.WriteLine("-");
-                //DoSelect();
             });
         }
 
@@ -200,9 +213,14 @@ namespace SuggesterApp
                     _basePanorama.Items.Add(item);
                 }
             }
-            addMakeSuggestionCtlToPanorama(_basePanorama, ApplicationBar, "locations", "Location.xml", "locations", "location", 75);
-            addMakeSuggestionCtlToPanorama(_basePanorama, ApplicationBar, "emotions", "Emotions.txt", "emotions", "emotions", 45);
-            addMakeSuggestionCtlToPanorama(_basePanorama, ApplicationBar, "relationships", "Relationship.txt", "relationships", "relationship", 15);
+
+            List<SuggestionList> listOfLists = App.Config.Lists;
+            foreach (SuggestionList list in listOfLists.Where(lol => !lol.IsTrialList && lol.IsVisible))
+            {
+                loadSuggestionListToUI(_basePanorama, ApplicationBar, newItem_Click, list);
+            }
+
+            App.Config.SaveXmlToFileInIS();
         }
 
         private void removeTrialModeFromMenu()
@@ -221,5 +239,87 @@ namespace SuggesterApp
             }
         }
         #endregion Updgrade
+
+        private void SettingsIconButton_Click(object sender, EventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("/SettingsPage.xaml", UriKind.Relative));
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            //MyApplicationBarMenuItem s = (MyApplicationBarMenuItem)sender;
+
+            //PanoramaItem[] tempSug = new PanoramaItem[_basePanorama.Items.Count];
+            //int selectedItemIndex = -1;
+            //for (int i = 0; i < _basePanorama.Items.Count; ++i)
+            //{
+            //    var item = _basePanorama.Items[i] as PanoramaItem;
+            //    if (item != null)
+            //    {
+            //        tempSug[i] = item;
+            //        if (item == s.MyPanoramaItem)
+            //        {
+            //            selectedItemIndex = i;
+            //        }
+            //    }
+            //}
+
+            bool isSame = true;
+            int nextItem = 0;
+            var newList = App.Config.Lists.Where(l => l.IsVisible).OrderBy(l => l.SortPriority).ToList();
+            PanoramaItem[] tempSug = new PanoramaItem[newList.Count];
+            //foreach (var list in App.Config.Lists.Where(l => l.IsVisible).OrderBy(l => l.SortPriority))
+            foreach (var list in newList)
+            {
+                bool foundControl = false;
+                for (int i = 0; i < _basePanorama.Items.Count; ++i)
+                {
+                    var item = _basePanorama.Items[i] as PanoramaItem;                    
+                    var controlItem = item.Content as MakeSuggestionCtl;
+                    if ((controlItem != null) && (controlItem.Id == list.Id))
+                    {
+                        if (nextItem != i)
+                        {
+                            isSame = false;
+                        }
+                        tempSug[nextItem++] = item;
+                        foundControl = true;
+                        break;
+                    }
+                }
+                if (!foundControl)
+                {
+                    var sug = new MakeSuggestionCtl
+                    {
+                        Id = list.Id,
+                        FileName = list.FileName,
+                        PluralName = list.PluralName,
+                        SingularName = list.SingularName,
+                        HistoryCount = list.HistoryCount
+                    };
+                    var panItem = new PanoramaItem
+                    {
+                        FontSize = 42
+                    };
+                    sug.DoSelect();
+                    panItem.Content = sug;
+                    tempSug[nextItem++] = panItem;
+                    //foundControl = true;
+                }
+            }
+
+            if (!isSame)
+            {
+                _basePanorama.Items.Clear();
+                foreach (var item in tempSug)
+                {
+                    _basePanorama.Items.Add(item);
+                }
+            }
+            //if (selectedItemIndex != -1)
+            //{
+            //    _basePanorama.DefaultItem = _basePanorama.Items[selectedItemIndex];
+            //}
+        }
     }
 }

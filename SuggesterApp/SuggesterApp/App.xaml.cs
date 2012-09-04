@@ -12,6 +12,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
+using SuggesterTools;
 
 namespace SuggesterApp
 {
@@ -140,6 +141,8 @@ namespace SuggesterApp
         }
 
         #endregion
+
+        public static SuggesterAppConfig Config { get; set; }
 
         #region IsTrial
         public static bool IsTrial { get; private set; }

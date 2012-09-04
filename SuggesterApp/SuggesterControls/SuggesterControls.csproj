@@ -67,6 +67,18 @@
     <Reference Include="mscorlib.extensions" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddEditSuggestionCtl.xaml.cs">
+      <DependentUpon>AddEditSuggestionCtl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddEditSuggestionListCtl.xaml.cs">
+      <DependentUpon>AddEditSuggestionListCtl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ListSuggestionListsCtl.xaml.cs">
+      <DependentUpon>ListSuggestionListsCtl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ListSuggestionsCtl.xaml.cs">
+      <DependentUpon>ListSuggestionsCtl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MakeSuggestionCtl.xaml.cs">
       <DependentUpon>MakeSuggestionCtl.xaml</DependentUpon>
     </Compile>
@@ -74,6 +86,22 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="AddEditSuggestionCtl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddEditSuggestionListCtl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ListSuggestionListsCtl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ListSuggestionsCtl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MakeSuggestionCtl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -84,6 +112,10 @@
       <Project>{32ACC255-AF26-423A-BCCC-0FDE5CA12B66}</Project>
       <Name>SuggesterTools</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\DataSources\SuggesterTools.Suggestion.datasource" />
+    <None Include="Properties\DataSources\SuggesterTools.SuggestionList.datasource" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.CSharp.targets" />

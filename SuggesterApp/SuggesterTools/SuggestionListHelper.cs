@@ -19,7 +19,7 @@ namespace SuggesterTools
     {
         //private static List<SuggestionList> LoadSuggestionListFromResources()
         //{
-        //    string fileName = "LameSuggester.SampleData.Lists.xml";
+        //    string fileName = "SuggesterTools.SampleData.Lists.xml";
 
         //    using (Stream stream = Assembly.GetExecutingAssembly()
         //       .GetManifestResourceStream(fileName))

@@ -24,3 +24,13 @@ C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\obj\Debug
 C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\obj\Debug\Improv Suggester.g.resources
 C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\obj\Debug\Improv Suggester.dll
 C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\obj\Debug\Improv Suggester.pdb
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\Bin\Debug\Images\add.png
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\Bin\Debug\Images\close.png
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\Bin\Debug\Images\edit.png
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\Bin\Debug\Images\list.png
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\Bin\Debug\Images\save.png
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\Bin\Debug\Images\settings.png
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\obj\Debug\SettingsPage.g.i.cs
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\obj\Debug\ListSuggestionsPage.g.i.cs
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\obj\Debug\AddEditSuggestionPage.g.i.cs
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\obj\Debug\AddEditSuggestionListPage.g.i.cs
