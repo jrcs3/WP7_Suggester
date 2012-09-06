@@ -15,7 +15,7 @@ using SuggesterControls;
 
 namespace SuggesterApp
 {
-    public partial class ListSuggestions : PhoneApplicationPage
+    public partial class ListSuggestionsPage : PhoneApplicationPage
     {
         private string _listName;
         public string ListName
@@ -27,7 +27,7 @@ namespace SuggesterApp
                 PageTitle.Text = string.Format("{0} list", _listName);
             }
         }
-        public ListSuggestions()
+        public ListSuggestionsPage()
         {
             InitializeComponent();
         }

@@ -4,6 +4,7 @@
   <Lists>
     <List>
       <Id>1</Id>
+      <ListFileName>Object.xml</ListFileName>
       <HeaderText>objects</HeaderText>
       <ListName>Object</ListName>
       <PluralName>objects</PluralName>
@@ -19,6 +20,7 @@
     </List>
     <List>
       <Id>2</Id>
+      <ListFileName>Location.xml</ListFileName>
       <HeaderText>locations</HeaderText>
       <ListName>Location</ListName>
       <PluralName>locations</PluralName>
@@ -34,6 +36,7 @@
     </List>
     <List>
       <Id>3</Id>
+      <ListFileName>Adjective.xml</ListFileName>
       <HeaderText>adjectives</HeaderText>
       <ListName>Adjective</ListName>
       <PluralName>adjectives</PluralName>
@@ -49,6 +52,7 @@
     </List>
     <List>
       <Id>4</Id>
+      <ListFileName>Emotions.xml</ListFileName>
       <HeaderText>emotions</HeaderText>
       <ListName>Emotions</ListName>
       <PluralName>emotions</PluralName>
@@ -64,6 +68,7 @@
     </List>
     <List>
       <Id>5</Id>
+      <ListFileName>Relationship.xml</ListFileName>
       <HeaderText>relationships</HeaderText>
       <ListName>Relationship</ListName>
       <PluralName>relationships</PluralName>

@@ -17,6 +17,7 @@ namespace SuggesterApp
 {
     public partial class AddEditSuggestionListPage : PhoneApplicationPage
     {
+        private SuggestionList _suggestionList;
         public AddEditSuggestionListPage()
         {
             InitializeComponent();
@@ -26,8 +27,8 @@ namespace SuggesterApp
         {
             string ListName = Uri.UnescapeDataString(this.NavigationContext.QueryString["listName"]);
             var Lists = App.Config.Lists;
-            SuggestionList list = Lists.Where(l => l.ListName == ListName).SingleOrDefault();
-            _addEditSuggestionListCtl.List = list;
+            _suggestionList = Lists.Where(l => l.ListName == ListName).SingleOrDefault();
+            _addEditSuggestionListCtl.List = _suggestionList;
 
             _addEditSuggestionListCtl.Load();
             //listSuggestionsCtl1.ListName = ListName;
@@ -43,7 +44,7 @@ namespace SuggesterApp
 
         private void _addEditSuggestionListCtl_LoadList(object sender, EventArgs e)
         {
-
+            this.NavigationService.Navigate(new Uri(string.Format("/ListSuggestionsPage.xaml?xmlFile={0}&listName={1}", _suggestionList.FileName, Uri.EscapeUriString(_suggestionList.PluralName)), UriKind.Relative));
         }
 
     }

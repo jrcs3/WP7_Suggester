@@ -75,7 +75,7 @@ namespace SuggesterApp
 
         private static void loadSuggestionListToUI(Panorama para, IApplicationBar appBar, EventHandler newItemClick, SuggestionList li)
         {
-            addMakeSuggestionCtlToPanorama(para, appBar, li.Id, li.HeaderText, li.ListName + ".xml", li.PluralName, li.SingularName, li.HistoryCount, newItemClick);
+            addMakeSuggestionCtlToPanorama(para, appBar, li.Id, li.HeaderText, li.ListFileName, li.PluralName, li.SingularName, li.HistoryCount, newItemClick);
         }
 
         private void navigateAbout(object sender, EventArgs e)

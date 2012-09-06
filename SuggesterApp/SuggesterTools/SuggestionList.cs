@@ -14,6 +14,7 @@ namespace SuggesterTools
     public class SuggestionList
     {
         public int Id { get; set; }
+        public string ListFileName { get; set; }
         public string HeaderText { get; set; }
         public string ListName { get; set; }
         public string PluralName { get; set; }

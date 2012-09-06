@@ -58,6 +58,12 @@ namespace SuggesterControls
             _txtPlural.Text = List.PluralName;
             _chkIsVisible.IsChecked = List.IsVisible;
             _txtSort.Text = List.SortPriority.ToString();
+
+            _txtListName.IsEnabled = !List.ReadOnly;
+            _txtHeader.IsEnabled = !List.ReadOnly;
+            _txtSingular.IsEnabled = !List.ReadOnly;
+            _txtPlural.IsEnabled = !List.ReadOnly;
+            _btnList.IsEnabled = !List.ReadOnly;
         }
 
         public void Retreave()

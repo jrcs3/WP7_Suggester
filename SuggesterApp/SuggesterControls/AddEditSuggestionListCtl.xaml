@@ -93,6 +93,7 @@
             Content="Save" 
             Click="_btnSave_Click" />
         <Button 
+            Name="_btnList"
             Grid.Row="5"
             Grid.Column="2"
             Grid.ColumnSpan="2"

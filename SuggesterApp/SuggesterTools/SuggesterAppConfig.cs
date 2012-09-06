@@ -14,6 +14,7 @@ namespace SuggesterTools
         private const string LISTS_GROUP_ELEMENT_NAME = "Lists";
         private const string LIST_SINGLE_ELEMENT_NAME = "List";
         private const string ID_SINGLE_ELEMENT_NAME = "Id";
+        private const string LIST_FILE_NAME_ELEMENT_NAME = "ListFileName";
         private const string HEADER_TEXT_ELEMENT_NAME = "HeaderText";
         private const string LIST_NAME_ELEMENT_NAME = "ListName";
         private const string PLURAL_NAME_ELEMENT_NAME = "PluralName";
@@ -93,6 +94,7 @@ namespace SuggesterTools
                 SuggestionList newItem = new SuggestionList
                 {
                     Id = int.Parse(item.Element(ID_SINGLE_ELEMENT_NAME).Value),
+                    ListFileName = item.Element(LIST_FILE_NAME_ELEMENT_NAME).Value,
                     HeaderText = item.Element(HEADER_TEXT_ELEMENT_NAME).Value,
                     ListName = item.Element(LIST_NAME_ELEMENT_NAME).Value,
                     PluralName = item.Element(PLURAL_NAME_ELEMENT_NAME).Value,
@@ -131,6 +133,7 @@ namespace SuggesterTools
             {
                 rVal.Add(new XElement(LIST_SINGLE_ELEMENT_NAME,
                     new XElement(ID_SINGLE_ELEMENT_NAME, listIem.Id),
+                    new XElement(LIST_FILE_NAME_ELEMENT_NAME, listIem.ListFileName),
                     new XElement(HEADER_TEXT_ELEMENT_NAME, listIem.HeaderText),
                     new XElement(LIST_NAME_ELEMENT_NAME, listIem.ListName),
                     new XElement(PLURAL_NAME_ELEMENT_NAME, listIem.PluralName),
