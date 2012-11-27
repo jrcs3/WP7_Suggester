@@ -87,6 +87,10 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PairingGroup\PairingEvenTests.cs" />
+    <Compile Include="PairingGroup\PairingOddTests.cs" />
+    <Compile Include="PairingGroup\PairingTestUtil.cs" />
+    <Compile Include="PairingGroup\PlayerTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -119,6 +123,10 @@
     <ProjectReference Include="..\Lists\Lists.csproj">
       <Project>{703F8C44-175F-46AA-A76F-C53AC90C7199}</Project>
       <Name>Lists</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PairingTools\PairingTools.csproj">
+      <Project>{F51C25C1-0787-4FED-AA6F-7081FEB0E99D}</Project>
+      <Name>PairingTools</Name>
     </ProjectReference>
     <ProjectReference Include="..\SuggesterTools\SuggesterTools.csproj">
       <Project>{32ACC255-AF26-423A-BCCC-0FDE5CA12B66}</Project>

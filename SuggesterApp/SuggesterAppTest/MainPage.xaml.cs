@@ -34,6 +34,9 @@ namespace SuggesterAppTest
             {
                 SystemTray.IsVisible = false;
                 UnitTestSettings settings = UnitTestSystem.CreateDefaultSettings();
+                //settings.TagExpression = "PairingEvenTests+PairingOddTests";
+                //settings.TagExpression = "PairingOddTests";
+                settings.TagExpression = "All";
                 //settings.TestService = null;
                 settings.TestAssemblies.Add(Assembly.GetExecutingAssembly());
                 var rawTestPage = UnitTestSystem.CreateTestPage(settings);

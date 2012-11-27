@@ -11,7 +11,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuggesterAppTest", "Suggest
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lists", "Lists\Lists.csproj", "{703F8C44-175F-46AA-A76F-C53AC90C7199}"
 EndProject
-Project("{96E2B04D-8817-42C6-938A-82C39BA4D311}") = "IconSamples", "IconSamples\IconSamples.contentproj", "{D8732AAC-B504-4F5A-BDC7-521111057D50}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IconSamples", "IconSamples\IconSamples.contentproj", "{D8732AAC-B504-4F5A-BDC7-521111057D50}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PairingTools", "PairingTools\PairingTools.csproj", "{F51C25C1-0787-4FED-AA6F-7081FEB0E99D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -73,6 +75,14 @@ Global
 		{D8732AAC-B504-4F5A-BDC7-521111057D50}.DebugFakeStore|Any CPU.ActiveCfg = Debug|Any CPU
 		{D8732AAC-B504-4F5A-BDC7-521111057D50}.DebugTrial|Any CPU.ActiveCfg = Debug|Any CPU
 		{D8732AAC-B504-4F5A-BDC7-521111057D50}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{F51C25C1-0787-4FED-AA6F-7081FEB0E99D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F51C25C1-0787-4FED-AA6F-7081FEB0E99D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F51C25C1-0787-4FED-AA6F-7081FEB0E99D}.DebugFakeStore|Any CPU.ActiveCfg = Debug|Any CPU
+		{F51C25C1-0787-4FED-AA6F-7081FEB0E99D}.DebugFakeStore|Any CPU.Build.0 = Debug|Any CPU
+		{F51C25C1-0787-4FED-AA6F-7081FEB0E99D}.DebugTrial|Any CPU.ActiveCfg = Debug|Any CPU
+		{F51C25C1-0787-4FED-AA6F-7081FEB0E99D}.DebugTrial|Any CPU.Build.0 = Debug|Any CPU
+		{F51C25C1-0787-4FED-AA6F-7081FEB0E99D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F51C25C1-0787-4FED-AA6F-7081FEB0E99D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
