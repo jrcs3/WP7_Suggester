@@ -49,6 +49,7 @@
                     HorizontalAlignment="Stretch" 
                     ListSuggestions="_listSuggestionListsCtl_ListSuggestions"
                     EditListSttings="_listSuggestionListsCtl_EditListSttings"
+                    UploadList="_listSuggestionListsCtl_UploadList"                   
                     Grid.Row="1" />
                 </Grid>
             </controls:Panorama>

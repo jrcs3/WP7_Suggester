@@ -19,28 +19,33 @@
                 <DataTemplate>
                     <Grid HorizontalAlignment="Stretch">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="100" />
-                            <ColumnDefinition Width="100" />
-                            <ColumnDefinition Width="100" />
-                            <ColumnDefinition Width="100" />
+                            <ColumnDefinition Width="80" />
+                            <ColumnDefinition Width="80" />
+                            <ColumnDefinition Width="80" />
+                            <ColumnDefinition Width="80" />
+                            <ColumnDefinition Width="100"/>
                         </Grid.ColumnDefinitions>
                         <Grid.RowDefinitions>
                             <RowDefinition />
                             <RowDefinition />
+                            <RowDefinition Height="15" />
                         </Grid.RowDefinitions>
                         <TextBlock 
+                            FontSize="20"
                             Grid.Column="0" 
                             Grid.ColumnSpan="2"
                             Grid.Row="0"
                             Text="{Binding Path=ListName}" 
                             HorizontalAlignment="Stretch" />
                         <TextBlock 
-                            Grid.Column="0" 
+                            FontSize="14"
+                            Grid.Column="1" 
                             Grid.Row="1"
                             Text="{Binding Path=SortPriority}" 
                             HorizontalAlignment="Right" />
                         <TextBlock 
-                            Grid.Column="1" 
+                            FontSize="14"
+                            Grid.Column="0" 
                             Grid.Row="1"
                             Text="{Binding Path=IsVisiableString}" 
                             HorizontalAlignment="Right" />
@@ -50,7 +55,7 @@
                             Grid.RowSpan="2"
                             Content="Edit" 
                             Click="editList_Click" 
-                            Tag="{Binding Path=ListName}"  />
+                            Tag="{Binding Path=ListName}" FontSize="14"  />
                         <Button 
                             Grid.Column="3" 
                             Grid.Row="0"
@@ -58,7 +63,15 @@
                             Content="List"
                             IsEnabled="{Binding Path=AllowEditing}"
                             Click="listItems_Click" 
-                            Tag="{Binding Path=ListName}"/>
+                            Tag="{Binding Path=ListName}" FontSize="14" />
+                        <Button 
+                            Grid.Column="4" 
+                            Grid.Row="0"
+                            Grid.RowSpan="2"
+                            Content="Upload"
+                            IsEnabled="{Binding Path=AllowEditing}"
+                            Click="uploadList_Click" 
+                            Tag="{Binding Path=ListName}" FontSize="14" />
                     </Grid>
                 </DataTemplate>
             </ListBox.ItemTemplate>

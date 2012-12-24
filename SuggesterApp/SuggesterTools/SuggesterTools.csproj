@@ -71,6 +71,7 @@
     <Compile Include="ListHelper.cs" />
     <Compile Include="ListSourceType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SkyDriveContent.cs" />
     <Compile Include="StorageHelper.cs" />
     <Compile Include="SuggesterAppConfig.cs" />
     <Compile Include="Suggestion.cs" />

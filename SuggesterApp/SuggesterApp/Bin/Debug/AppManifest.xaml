@@ -3,6 +3,8 @@
     <AssemblyPart x:Name="Improv Suggester" Source="Improv Suggester.dll" />
     <AssemblyPart x:Name="Lists" Source="Lists.dll" />
     <AssemblyPart x:Name="Microsoft.Expression.Controls" Source="Microsoft.Expression.Controls.dll" />
+    <AssemblyPart x:Name="Microsoft.Live.Controls" Source="Microsoft.Live.Controls.dll" />
+    <AssemblyPart x:Name="Microsoft.Live" Source="Microsoft.Live.dll" />
     <AssemblyPart x:Name="Microsoft.Phone.Controls" Source="Microsoft.Phone.Controls.dll" />
     <AssemblyPart x:Name="SuggesterControls" Source="SuggesterControls.dll" />
     <AssemblyPart x:Name="SuggesterTools" Source="SuggesterTools.dll" />

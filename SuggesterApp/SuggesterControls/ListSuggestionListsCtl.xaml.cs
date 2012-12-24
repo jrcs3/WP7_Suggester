@@ -19,6 +19,7 @@ namespace SuggesterControls
         public SuggestionList SelectedSuggestion;
 
         public event EventHandler EditListSttings;
+        public event EventHandler UploadList;
         public event EventHandler ListSuggestions;
 
         public ListSuggestionListsCtl()
@@ -37,35 +38,36 @@ namespace SuggesterControls
         private void editList_Click(object sender, RoutedEventArgs e)
         {
             Button b = (Button)sender;
-            //MessageBox.Show(b.Tag.ToString());
             SelectedSuggestion = Config.Lists.Where(l => l.ListName == b.Tag.ToString()).SingleOrDefault();
 
             if (EditListSttings != null)
             {
                 EditListSttings(this, EventArgs.Empty);
             }
-            //if (SelectedSuggestion != null)
-            //{
-            //    MessageBox.Show(SelectedSuggestion.ListName);
-            //}
         }
 
         private void listItems_Click(object sender, RoutedEventArgs e)
         {
             Button b = (Button)sender;
-            //MessageBox.Show(b.Tag.ToString());
             SelectedSuggestion = Config.Lists.Where(l => l.ListName == b.Tag.ToString()).SingleOrDefault();
 
             if (ListSuggestions != null)
             {
                 ListSuggestions(this, EventArgs.Empty);
             }
-
-            //if (SelectedSuggestion != null)
-            //{
-            //    MessageBox.Show(SelectedSuggestion.ListName);
-            //}
         }
+
+        private void uploadList_Click(object sender, RoutedEventArgs e)
+        {
+            Button b = (Button)sender;
+            SelectedSuggestion = Config.Lists.Where(l => l.ListName == b.Tag.ToString()).SingleOrDefault();
+
+            if (UploadList != null)
+            {
+                UploadList(this, EventArgs.Empty);
+            }
+        }
+
 
         private void _lstSuggestionLists_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {

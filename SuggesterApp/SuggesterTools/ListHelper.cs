@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Net;
 using System.Windows;
 using System.Windows.Controls;
@@ -12,10 +13,11 @@ using System.Collections.Generic;
 using System.Reflection;
 using System.IO;
 using System.Xml.Linq;
+using System.Text;
 
 namespace SuggesterTools
 {
-    public class ListHelper
+    public static class ListHelper
     {
 
         public static List<Suggestion> ReadResourceFile(string assemblyname, string fileName)
@@ -75,5 +77,17 @@ namespace SuggesterTools
             return nameParts[0];
         }
 
+
+        public static string[] ConvertSuggestionListToStringArray(List<Suggestion> list)
+        {
+            return list.Select(x => x.Text).ToArray();
+        }
+
+        public static Stream ConvertSuggestionListToStreamy(List<Suggestion> list)
+        {
+            byte[] byteArray = Encoding.UTF8.GetBytes(string.Join(Environment.NewLine,  ConvertSuggestionListToStringArray(list)));
+            MemoryStream stream = new MemoryStream(byteArray);
+            return stream;
+        }
     }
 }

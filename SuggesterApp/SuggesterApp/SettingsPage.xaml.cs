@@ -43,5 +43,12 @@ namespace SuggesterApp
             var s = ctl.SelectedSuggestion;
             this.NavigationService.Navigate(new Uri(string.Format("/AddEditSuggestionListPage.xaml?&listName={0}", Uri.EscapeUriString(s.ListName)), UriKind.Relative));
         }
+
+        private void _listSuggestionListsCtl_UploadList(object sender, EventArgs e)
+        {
+            var ctl = (ListSuggestionListsCtl)sender;
+            var s = ctl.SelectedSuggestion;
+            this.NavigationService.Navigate(new Uri(string.Format("/SkydriveBrowseSave.xaml?xmlFile={0}&listName={1}", s.FileName, Uri.EscapeUriString(s.ListName)), UriKind.Relative));
+        }
     }
 }

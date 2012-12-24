@@ -10,6 +10,7 @@ using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SuggesterTools;
+using System.IO;
 
 namespace SuggesterAppTest
 {
@@ -27,6 +28,29 @@ namespace SuggesterAppTest
         {
             var list = ListHelper.ReadResourceFile("Lists", "Adjective.txt");
             Assert.AreEqual("abrasive", list[2].Text);
+        }
+        [TestMethod]
+        public void SuggesterAppTest_ConvertToText()
+        {
+            var list = ListHelper.ReadResourceFile("Lists", "Adjective.txt");
+            string[] textLinesAsStringArray = ListHelper.ConvertSuggestionListToStringArray(list);
+            //string text = list.to
+            Assert.AreEqual("abrasive", textLinesAsStringArray[2]);
+        }
+        [TestMethod]
+        public void SuggesterAppTest_ConvertToStream()
+        {
+            var list = ListHelper.ReadResourceFile("Lists", "Adjective.txt");
+            using (Stream textLinesAsStream = ListHelper.ConvertSuggestionListToStreamy(list))
+            {
+                textLinesAsStream.Seek(0, SeekOrigin.Begin);
+                StreamReader rdr = new StreamReader(textLinesAsStream);
+
+                string str = rdr.ReadToEnd();
+
+                string[] lines = str.Replace("\r", "").Split('\n');
+                Assert.AreEqual("abrasive", lines[2]);
+            }
         }
     }
 }

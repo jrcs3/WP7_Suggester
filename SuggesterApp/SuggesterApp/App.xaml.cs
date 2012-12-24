@@ -13,6 +13,7 @@ using System.Windows.Shapes;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using SuggesterTools;
+using Microsoft.Live;
 
 namespace SuggesterApp
 {
@@ -23,6 +24,8 @@ namespace SuggesterApp
         /// </summary>
         /// <returns>The root frame of the Phone Application.</returns>
         public PhoneApplicationFrame RootFrame { get; private set; }
+
+        public static LiveConnectSession LiveSession { get; set; }
 
         /// <summary>
         /// Constructor for the Application object.

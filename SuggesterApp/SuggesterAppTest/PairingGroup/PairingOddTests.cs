@@ -175,6 +175,5 @@ namespace SuggesterAppTest.PairingGroup
             Assert.AreEqual(2, myPlayers[11].TimesPicked);
             Assert.AreEqual(2, myPlayers[12].TimesPicked);
         }
-
     }
 }
