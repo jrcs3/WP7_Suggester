@@ -29,6 +29,20 @@ namespace SuggesterTools
         public bool IsTrialList { get; set; }
         public string IsVisiableString { get { return IsVisible ? "VISIBLE" : "Not Visible"; } }
         public bool AllowEditing { get { return !ReadOnly; } }
+        public Visibility VisibilityForAllowEditing
+        {
+            get
+            {
+                if (ReadOnly)
+                {
+                    return Visibility.Collapsed;
+                }
+                else
+                {
+                    return Visibility.Visible;
+                }
+            }
+        }
 
         public string FileName { get { return ListName + ".xml"; } }
     }
