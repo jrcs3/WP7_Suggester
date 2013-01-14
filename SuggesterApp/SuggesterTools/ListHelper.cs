@@ -40,14 +40,17 @@ namespace SuggesterTools
             var list = new List<string>();
             using (Stream stream = a.GetManifestResourceStream(getAssemblyFirstName(a) + "." + fileName))
             {
-                using (StreamReader reader = new StreamReader(stream))
+                if (stream != null)
                 {
-                    while (reader.Peek() >= 0)
+                    using (StreamReader reader = new StreamReader(stream))
                     {
-                        string line = reader.ReadLine();
-                        if (!string.IsNullOrWhiteSpace(line))
+                        while (reader.Peek() >= 0)
                         {
-                            list.Add(line);
+                            string line = reader.ReadLine();
+                            if (!string.IsNullOrWhiteSpace(line))
+                            {
+                                list.Add(line);
+                            }
                         }
                     }
                 }

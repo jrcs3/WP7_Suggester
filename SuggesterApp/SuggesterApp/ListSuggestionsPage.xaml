@@ -40,7 +40,7 @@
     <phone:PhoneApplicationPage.ApplicationBar>
         <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
             <shell:ApplicationBarIconButton IconUri="/Images/add.png" Text="add" Click="addButton_Click" />
-            <shell:ApplicationBarIconButton IconUri="/Images/close.png" Text="close" Click="backButton_Click"/>
+            <!--<shell:ApplicationBarIconButton IconUri="/Images/delete.png" Text="delete" Click="deleteButton_Click"/>-->
             <!--<shell:ApplicationBar.MenuItems>
                 <shell:ApplicationBarMenuItem Text="MenuItem 1"/>
                 <shell:ApplicationBarMenuItem Text="MenuItem 2"/>

@@ -11,7 +11,7 @@
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait" Orientation="Portrait"
-    mc:Ignorable="d" d:DesignHeight="768" d:DesignWidth="480"
+    mc:Ignorable="d" d:DesignHeight="696" d:DesignWidth="480"
     shell:SystemTray.IsVisible="True" xmlns:my="clr-namespace:SuggesterControls;assembly=SuggesterControls">
 
     <!--LayoutRoot is the root grid where all page content is placed-->
@@ -36,13 +36,13 @@
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" HorizontalAlignment="Stretch" >
-            <controls:Panorama Name="_basePanorama" >
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="*"/>
-                    </Grid.RowDefinitions>
-                    <TextBlock>Suggestion Lists</TextBlock>
+            <!--<controls:Panorama Name="_basePanorama" >-->
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <TextBlock>Suggestion Lists</TextBlock>
                 <my:ListSuggestionListsCtl 
                     Name="_listSuggestionListsCtl" 
                     VerticalAlignment="Stretch" 
@@ -51,22 +51,37 @@
                     EditListSttings="_listSuggestionListsCtl_EditListSttings"
                     UploadList="_listSuggestionListsCtl_UploadList"                   
                     Grid.Row="1" />
-                </Grid>
-            </controls:Panorama>
+                <StackPanel 
+                    Name="_spTrialMode" 
+                    Visibility="Collapsed"
+                    Grid.Row="1">
+                    <TextBlock>Trial Mode</TextBlock>
+                    <TextBlock>Improv Suggester lets you edit your lists</TextBlock>
+                </StackPanel>
+            </Grid>
+            <!--</controls:Panorama>-->
             
         </Grid>
     </Grid>
  
     <!--Sample code showing usage of ApplicationBar-->
-    <!--<phone:PhoneApplicationPage.ApplicationBar>
+    <phone:PhoneApplicationPage.ApplicationBar>
         <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
-            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button1.png" Text="Button 1"/>
-            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button2.png" Text="Button 2"/>
-            <shell:ApplicationBar.MenuItems>
+            <shell:ApplicationBarIconButton 
+                IconUri="/Images/download.png" 
+                Text="Get Lists"
+                Click="DownloadList_Click"
+                />
+            <shell:ApplicationBarIconButton 
+                IconUri="/Images/add.png" 
+                Text="New List"
+                Click="AddList_Click"
+                />
+            <!--<shell:ApplicationBar.MenuItems>
                 <shell:ApplicationBarMenuItem Text="MenuItem 1"/>
                 <shell:ApplicationBarMenuItem Text="MenuItem 2"/>
-            </shell:ApplicationBar.MenuItems>
+            </shell:ApplicationBar.MenuItems>-->
         </shell:ApplicationBar>
-    </phone:PhoneApplicationPage.ApplicationBar>-->
+    </phone:PhoneApplicationPage.ApplicationBar>
 
 </phone:PhoneApplicationPage>

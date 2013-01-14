@@ -52,6 +52,9 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugFakeStore|AnyCPU'">
     <OutputPath>bin\DebugFakeStore\</OutputPath>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Doomed|AnyCPU'">
+    <OutputPath>bin\Doomed\</OutputPath>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System.Windows" />
     <Reference Include="system" />

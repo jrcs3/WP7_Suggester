@@ -16,6 +16,7 @@ namespace SuggesterControls
     public partial class AddEditSuggestionCtl : UserControl
     {
         public event EventHandler Saved;
+        public event EventHandler Deleted;
 
         private string _fileName = string.Empty;
         private StorageHelper<Suggestion> _storageHelper;
@@ -73,6 +74,22 @@ namespace SuggesterControls
         private void _btnSave_Click(object sender, RoutedEventArgs e)
         {
             DoSave();
+        }
+
+        public void DoDelete()
+        {
+            EditedSuggestion.Text = _txtNewSuggestion.Text;
+            List<Suggestion> list = _storageHelper.GetList();
+            Suggestion match = list.Where(s => s.Id == EditedSuggestion.Id).SingleOrDefault();
+            if (match != null)
+            {
+                list.Remove(match);
+                _storageHelper.SaveList(list);
+                if (Deleted != null)
+                {
+                    Deleted(this, EventArgs.Empty);
+                }
+            }
         }
 
         public void DoSave()

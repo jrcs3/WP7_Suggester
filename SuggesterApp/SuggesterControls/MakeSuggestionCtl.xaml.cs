@@ -162,21 +162,28 @@ namespace SuggesterControls
         {
             try
             {
-                ensureList();
-                List<int> hList = pickHistory;
-                Random random = new Random();
-                int randomNumber;
-                do
+                if (_list != null && _list.Length > 0)
                 {
-                    randomNumber = random.Next(0, _list.Length);
-                } while (hList.Contains(randomNumber));
-                hList.Insert(0, randomNumber);
-                while (hList.Count > HistoryCount)
-                {
-                    hList.RemoveAt(HistoryCount);
+                    ensureList();
+                    List<int> hList = pickHistory;
+                    Random random = new Random();
+                    int randomNumber;
+                    do
+                    {
+                        randomNumber = random.Next(0, _list.Length);
+                    } while (hList.Contains(randomNumber));
+                    hList.Insert(0, randomNumber);
+                    while (hList.Count > HistoryCount)
+                    {
+                        hList.RemoveAt(HistoryCount);
+                    }
+                    pickHistory = hList;
+                    _txtSuggestion.Text = _list[randomNumber].Text;
                 }
-                pickHistory = hList;
-                _txtSuggestion.Text = _list[randomNumber].Text;
+                else
+                {
+                    _btnSuggest.IsEnabled = false;
+                }
             }
             catch
             {

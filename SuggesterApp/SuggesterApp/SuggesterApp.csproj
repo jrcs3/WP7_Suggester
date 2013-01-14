@@ -63,6 +63,9 @@
     <OutputPath>bin\DebugFakeStore\</OutputPath>
     <DefineConstants>SILVERLIGHT;WINDOWS_PHONE;TRIAL;FAKESTORE</DefineConstants>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Doomed|AnyCPU'">
+    <OutputPath>bin\Doomed\</OutputPath>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Devices.Sensors" />
     <Reference Include="Microsoft.Expression.Controls, Version=3.8.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
@@ -91,6 +94,9 @@
     </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SkydriveBrowseGet.xaml.cs">
+      <DependentUpon>SkydriveBrowseGet.xaml</DependentUpon>
     </Compile>
     <Compile Include="ListSuggestionsPage.xaml.cs">
       <DependentUpon>ListSuggestionsPage.xaml</DependentUpon>
@@ -123,6 +129,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="AddEditSuggestionPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SkydriveBrowseGet.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -166,7 +176,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Resource Include="Images\delete.png" />
-    <Resource Include="Images\download.png" />
+    <Content Include="Images\download.png" />
     <Content Include="Images\edit.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

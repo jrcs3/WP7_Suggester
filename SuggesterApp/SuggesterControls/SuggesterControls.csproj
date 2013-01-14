@@ -54,6 +54,9 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugFakeStore|AnyCPU'">
     <OutputPath>bin\DebugFakeStore\</OutputPath>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Doomed|AnyCPU'">
+    <OutputPath>bin\Doomed\</OutputPath>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Expression.Controls, Version=3.8.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Phone" />

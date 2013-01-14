@@ -54,6 +54,9 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugFakeStore|AnyCPU'">
     <OutputPath>bin\DebugFakeStore\</OutputPath>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Doomed|AnyCPU'">
+    <OutputPath>bin\Doomed\</OutputPath>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Devices.Sensors" />
     <Reference Include="System.Windows" />

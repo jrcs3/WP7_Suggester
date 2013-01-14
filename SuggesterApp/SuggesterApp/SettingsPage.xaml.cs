@@ -27,7 +27,17 @@ namespace SuggesterApp
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            _listSuggestionListsCtl.LoadList();
+            if (App.IsTrial)
+            {
+                _spTrialMode.Visibility = Visibility.Visible;
+                _listSuggestionListsCtl.Visibility = Visibility.Collapsed;
+            }
+            else
+            {
+                _spTrialMode.Visibility = Visibility.Collapsed;
+                _listSuggestionListsCtl.Visibility = Visibility.Visible;
+                _listSuggestionListsCtl.LoadList();
+            }
         }
 
         private void _listSuggestionListsCtl_ListSuggestions(object sender, EventArgs e)
@@ -49,6 +59,16 @@ namespace SuggesterApp
             var ctl = (ListSuggestionListsCtl)sender;
             var s = ctl.SelectedSuggestion;
             this.NavigationService.Navigate(new Uri(string.Format("/SkydriveBrowseSave.xaml?xmlFile={0}&listName={1}", s.FileName, Uri.EscapeUriString(s.ListName)), UriKind.Relative));
+        }
+
+        private void DownloadList_Click(object sender, EventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("/SkydriveBrowseGet.xaml", UriKind.Relative));
+        }
+
+        private void AddList_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Add Logic Here");
         }
     }
 }

@@ -73,5 +73,10 @@ namespace SuggesterApp
         {
             this.NavigationService.GoBack();
         }
+
+        private void deleteButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

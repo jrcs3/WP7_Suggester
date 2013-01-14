@@ -4,6 +4,7 @@
     <AssemblyPart x:Name="Lists" Source="Lists.dll" />
     <AssemblyPart x:Name="Microsoft.Silverlight.Testing" Source="Microsoft.Silverlight.Testing.dll" />
     <AssemblyPart x:Name="Microsoft.VisualStudio.QualityTools.UnitTesting.Silverlight" Source="Microsoft.VisualStudio.QualityTools.UnitTesting.Silverlight.dll" />
+    <AssemblyPart x:Name="PairingTools" Source="PairingTools.dll" />
     <AssemblyPart x:Name="SuggesterTools" Source="SuggesterTools.dll" />
   </Deployment.Parts>
 </Deployment>

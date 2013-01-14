@@ -57,6 +57,7 @@ namespace SuggesterApp
                 {
                     loadSuggestionListToUI(_basePanorama, ApplicationBar, newItem_Click, list);
                 }
+                //addTrialModeCtlToPanorama(_basePanorama, ApplicationBar, TRIAL_MODE_MENU_TEXT);
             }
             else
             {
@@ -242,7 +243,14 @@ namespace SuggesterApp
 
         private void SettingsIconButton_Click(object sender, EventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("/SettingsPage.xaml", UriKind.Relative));
+            //if (App.IsTrial)
+            //{
+            //    MessageBox.Show("Settings not available in Trial Mode.");
+            //}
+            //else
+            {
+                this.NavigationService.Navigate(new Uri("/SettingsPage.xaml", UriKind.Relative));
+            }
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)

@@ -61,5 +61,15 @@ namespace LameSuggester
         {
             this.NavigationService.GoBack();
         }
+
+        private void deleteButton_Click(object sender, EventArgs e)
+        {
+            addSuggestionCtl1.DoDelete();
+        }
+
+        private void addSuggestionCtl1_Deleted(object sender, EventArgs e)
+        {
+            this.NavigationService.GoBack();
+        }
     }
 }

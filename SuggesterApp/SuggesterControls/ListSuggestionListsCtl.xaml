@@ -55,7 +55,8 @@
                             Grid.RowSpan="2"
                             Margin="0"
                             Click="editList_Click" 
-                            Tag="{Binding Path=ListName}" >
+                            Tag="{Binding Path=ListName}" 
+                            Background="Black">
                             <Image Source="/SuggesterControls;component/Images/edit.png" />
                         </Button>
                         <Button 
@@ -65,7 +66,8 @@
                             Margin="0"
                             Visibility="{Binding Path=VisibilityForAllowEditing}"
                             Click="listItems_Click" 
-                            Tag="{Binding Path=ListName}" >
+                            Tag="{Binding Path=ListName}" 
+                            Background="Black">
                             <Image Source="/SuggesterControls;component/Images/list.png" />
                         </Button>
                         <Button 
@@ -75,7 +77,8 @@
                             Margin="0"
                             Visibility="{Binding Path=VisibilityForAllowEditing}"
                             Click="uploadList_Click" 
-                            Tag="{Binding Path=ListName}" >
+                            Tag="{Binding Path=ListName}" 
+                            Background="Black">
                             <Image Source="/SuggesterControls;component/Images/upload.png" />
                         </Button>
                     </Grid>

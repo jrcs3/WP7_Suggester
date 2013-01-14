@@ -52,5 +52,12 @@ namespace SuggesterAppTest
                 Assert.AreEqual("abrasive", lines[2]);
             }
         }
+        //[TestMethod]
+        //public void SuggesterAppTest_DeleteItemFromList()
+        //{
+        //    var list = ListHelper.ReadResourceFile("Lists", "Adjective.txt");
+        //    Assert.AreEqual("abrasive", list[2].Text);
+        //    list.Add(
+        //}
     }
 }

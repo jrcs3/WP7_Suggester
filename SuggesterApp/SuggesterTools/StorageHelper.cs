@@ -29,17 +29,20 @@ namespace SuggesterTools
             TextReader reader = null;
             try
             {
-                IsolatedStorageFile isoStorage = IsolatedStorageFile.GetUserStoreForApplication();
-                IsolatedStorageFileStream file = isoStorage.OpenFile(_fileName, FileMode.OpenOrCreate);
-                if (file.Length > 0)
+                if (!string.IsNullOrWhiteSpace(_fileName))
                 {
-                    reader = new StreamReader(file);
+                    IsolatedStorageFile isoStorage = IsolatedStorageFile.GetUserStoreForApplication();
+                    IsolatedStorageFileStream file = isoStorage.OpenFile(_fileName, FileMode.OpenOrCreate);
+                    if (file.Length > 0)
+                    {
+                        reader = new StreamReader(file);
 
-                    XmlSerializer xs = new XmlSerializer(typeof(List<T>));
-                    jogs.AddRange((List<T>)xs.Deserialize(reader));
-                    reader.Close();
+                        XmlSerializer xs = new XmlSerializer(typeof(List<T>));
+                        jogs.AddRange((List<T>)xs.Deserialize(reader));
+                        reader.Close();
+                    }
+                    file.Close();
                 }
-                file.Close();
             }
             catch (InvalidOperationException ex)
             {
@@ -48,7 +51,9 @@ namespace SuggesterTools
             finally
             {
                 if (reader != null)
+                {
                     reader.Dispose();
+                }
             }
             return jogs;
         }
@@ -57,15 +62,18 @@ namespace SuggesterTools
             TextWriter writer = null;
             try
             {
-                IsolatedStorageFile isoStorage = IsolatedStorageFile.GetUserStoreForApplication();
-                //isoStorage.CreateFile(_fileName);
-                IsolatedStorageFileStream file = isoStorage.OpenFile(_fileName, FileMode.Create);
-                writer = new StreamWriter(file);
+                if (!string.IsNullOrWhiteSpace(_fileName))
+                {
+                    IsolatedStorageFile isoStorage = IsolatedStorageFile.GetUserStoreForApplication();
+                    //isoStorage.CreateFile(_fileName);
+                    IsolatedStorageFileStream file = isoStorage.OpenFile(_fileName, FileMode.Create);
+                    writer = new StreamWriter(file);
 
-                XmlSerializer xs = new XmlSerializer(typeof(List<T>));
-                xs.Serialize(writer, jogs);
-                writer.Close();
-                file.Close();
+                    XmlSerializer xs = new XmlSerializer(typeof(List<T>));
+                    xs.Serialize(writer, jogs);
+                    writer.Close();
+                    file.Close();
+                }
             }
             finally
             {
