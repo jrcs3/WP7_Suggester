@@ -149,6 +149,22 @@ namespace SuggesterApp
 
         private void btnSelect_Click(object sender, RoutedEventArgs e)
         {
+            try
+            {
+                var fieldId = selectedItem.Id;
+
+                this.NavigationService.Navigate(new Uri(string.Format("/AddEditSuggestionListPage.xaml?fieldId={0}&remoteFileName={1}", selectedItem.Id, selectedItem.Name), UriKind.Relative));
+                //var client = new LiveConnectClient(App.LiveSession);
+
+                //client.DownloadCompleted += new EventHandler<LiveDownloadCompletedEventArgs>(client_DownloadCompleted);
+                //client.DownloadAsync(fieldId + "/content");
+                //client.DownloadAsync(fileId);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
             //if ((_contentList.Where(x => x.Name.ToLower() == txtFileName.Text.ToLower()).Count() == 0) ||
             //    MessageBox.Show("File Already Exists", "Title?", MessageBoxButton.OKCancel) == MessageBoxResult.OK)
             //{
@@ -157,12 +173,36 @@ namespace SuggesterApp
             //    _client.UploadCompleted += new EventHandler<LiveOperationCompletedEventArgs>(_client_UploadCompleted);
             //    _client.UploadAsync(_folderName, txtFileName.Text, s, OverwriteOption.Overwrite);
             //}
-            MessageBox.Show("Do Select and dowload here", "Improv Suggester", MessageBoxButton.OK);
+        }
+        void client_DownloadCompleted(object sender, LiveDownloadCompletedEventArgs e)
+        {
+            Stream textLinesAsStream = e.Result;
+            textLinesAsStream.Seek(0, SeekOrigin.Begin);
+            StreamReader rdr = new StreamReader(textLinesAsStream);
+
+            string str = rdr.ReadToEnd();
+
+            MessageBox.Show(str, "Improv Suggester", MessageBoxButton.OK);
+
+            while (NavigationService.BackStack.First().Source.OriginalString.StartsWith("/SkydriveBrowseGet.xaml"))
+            {
+                NavigationService.RemoveBackEntry();
+            }
+            if (NavigationService.CanGoBack)
+            {
+                NavigationService.GoBack();
+            }
+            //if (NavigationService.BackStack.First().Source.OriginalString == "/C.xaml")
+            //{
+            //    NavigationService.RemoveBackEntry();
+            //}
+            //txtContent.Text = str;
         }
 
-        void _client_UploadCompleted(object sender, LiveOperationCompletedEventArgs e)
-        {
-            MessageBox.Show("Saved");
-        }
+
+        //void _client_UploadCompleted(object sender, LiveOperationCompletedEventArgs e)
+        //{
+        //    MessageBox.Show("Saved");
+        //}
     }
 }

@@ -300,7 +300,7 @@ namespace SuggesterApp
                     var sug = new MakeSuggestionCtl
                     {
                         Id = list.Id,
-                        FileName = list.FileName,
+                        FileName = list.ListFileName,
                         PluralName = list.PluralName,
                         SingularName = list.SingularName,
                         HistoryCount = list.HistoryCount

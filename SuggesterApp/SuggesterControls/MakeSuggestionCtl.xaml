@@ -19,7 +19,7 @@
         <Button Name="_btnSuggest" Click="_btnSuggest_Click" Grid.Row="1"
                 BorderBrush="{StaticResource PhoneAccentBrush}">
             <TextBlock HorizontalAlignment="Center" 
-                   Name="_txtSuggestion" Text="_txtSuggestion" 
+                   Name="_txtSuggestion" Text="List has no items" 
                    VerticalAlignment="Center" FontSize="48" 
                    FontWeight="Bold" TextWrapping="Wrap" TextAlignment="Center"
                    Foreground="{StaticResource PhoneForegroundBrush}" />

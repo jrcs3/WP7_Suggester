@@ -52,18 +52,31 @@ namespace SuggesterControls
 
         public void Load()
         {
-            _txtListName.Text = List.ListName;
-            _txtHeader.Text = List.HeaderText;
-            _txtSingular.Text = List.SingularName;
-            _txtPlural.Text = List.PluralName;
+            _txtListName.Text = noNull(List.ListName);
+            _txtHeader.Text = noNull(List.HeaderText);
+            _txtSingular.Text = noNull(List.SingularName);
+            _txtPlural.Text = noNull(List.PluralName);
             _chkIsVisible.IsChecked = List.IsVisible;
             _txtSort.Text = List.SortPriority.ToString();
+            _txtHist.Text = List.HistoryCount.ToString();
 
             _txtListName.IsEnabled = !List.ReadOnly;
             _txtHeader.IsEnabled = !List.ReadOnly;
             _txtSingular.IsEnabled = !List.ReadOnly;
             _txtPlural.IsEnabled = !List.ReadOnly;
             _btnList.IsEnabled = !List.ReadOnly;
+        }
+
+        public static string noNull(string theString)
+        {
+            if (theString == null)
+            {
+                return string.Empty;
+            }
+            else
+            {
+                return theString;
+            }
         }
 
         public void Retreave()
@@ -77,6 +90,11 @@ namespace SuggesterControls
             if (int.TryParse(_txtSort.Text, out SortPriority))
             {
                 _list.SortPriority = SortPriority;
+            }
+            int HistoryCount;
+            if (int.TryParse(_txtHist.Text, out HistoryCount))
+            {
+                _list.HistoryCount = HistoryCount;
             }
         }
 

@@ -44,6 +44,6 @@ namespace SuggesterTools
             }
         }
 
-        public string FileName { get { return ListName + ".xml"; } }
+        //public string FileName { get { return ListName + ".xml"; } }
     }
 }

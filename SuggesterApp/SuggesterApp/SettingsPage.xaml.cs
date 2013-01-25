@@ -44,7 +44,7 @@ namespace SuggesterApp
         {
             var ctl = (ListSuggestionListsCtl)sender;
             var s = ctl.SelectedSuggestion;
-            this.NavigationService.Navigate(new Uri(string.Format("/ListSuggestionsPage.xaml?xmlFile={0}&listName={1}", s.FileName, Uri.EscapeUriString(s.ListName)), UriKind.Relative));
+            this.NavigationService.Navigate(new Uri(string.Format("/ListSuggestionsPage.xaml?xmlFile={0}&listName={1}", s.ListFileName, Uri.EscapeUriString(s.ListName)), UriKind.Relative));
         }
 
         private void _listSuggestionListsCtl_EditListSttings(object sender, EventArgs e)
@@ -58,7 +58,7 @@ namespace SuggesterApp
         {
             var ctl = (ListSuggestionListsCtl)sender;
             var s = ctl.SelectedSuggestion;
-            this.NavigationService.Navigate(new Uri(string.Format("/SkydriveBrowseSave.xaml?xmlFile={0}&listName={1}", s.FileName, Uri.EscapeUriString(s.ListName)), UriKind.Relative));
+            this.NavigationService.Navigate(new Uri(string.Format("/SkydriveBrowseSave.xaml?xmlFile={0}&listName={1}", s.ListFileName, Uri.EscapeUriString(s.ListName)), UriKind.Relative));
         }
 
         private void DownloadList_Click(object sender, EventArgs e)
@@ -68,7 +68,7 @@ namespace SuggesterApp
 
         private void AddList_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Add Logic Here");
+            this.NavigationService.Navigate(new Uri("/AddEditSuggestionListPage.xaml?newList=true", UriKind.Relative));
         }
     }
 }
