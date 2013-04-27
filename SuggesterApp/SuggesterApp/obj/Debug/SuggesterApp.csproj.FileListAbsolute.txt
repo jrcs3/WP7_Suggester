@@ -12,15 +12,11 @@ C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\Bin\Debug
 C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\Bin\Debug\SuggesterTools.pdb
 C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\Bin\Debug\Microsoft.Expression.Drawing.xml
 C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\obj\Debug\SuggesterApp.csprojResolveAssemblyReference.cache
-C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\obj\Debug\App.g.i.cs
-C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\obj\Debug\MainPage.g.i.cs
 C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\obj\Debug\XapCacheFile.xml
 C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\Bin\Debug\Lists.dll
 C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\Bin\Debug\Lists.pdb
 C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\Bin\Debug\Improv Suggester.dll
 C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\Bin\Debug\Improv Suggester.pdb
-C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\obj\Debug\TrialModeCtl.g.i.cs
-C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\obj\Debug\AboutPage.g.i.cs
 C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\obj\Debug\Improv Suggester.g.resources
 C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\obj\Debug\Improv Suggester.dll
 C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\obj\Debug\Improv Suggester.pdb
@@ -30,10 +26,6 @@ C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\Bin\Debug
 C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\Bin\Debug\Images\list.png
 C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\Bin\Debug\Images\save.png
 C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\Bin\Debug\Images\settings.png
-C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\obj\Debug\SettingsPage.g.i.cs
-C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\obj\Debug\ListSuggestionsPage.g.i.cs
-C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\obj\Debug\AddEditSuggestionPage.g.i.cs
-C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\obj\Debug\AddEditSuggestionListPage.g.i.cs
 C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\Bin\Debug\Microsoft.Live.Controls.dll
 C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\Bin\Debug\Microsoft.Live.dll
 C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\Bin\Debug\cs\Microsoft.Live.Controls.resources.dll
@@ -60,11 +52,19 @@ C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\Bin\Debug
 C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\Bin\Debug\sv\Microsoft.Live.Controls.resources.dll
 C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\Bin\Debug\zh-cn\Microsoft.Live.Controls.resources.dll
 C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\Bin\Debug\zh-tw\Microsoft.Live.Controls.resources.dll
-C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\obj\Debug\SkydriveBrowseSave.g.i.cs
-C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\obj\Debug\SkydriveBrowseGet.g.i.cs
 C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\Bin\Debug\Images\delete.png
 C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\Bin\Debug\Images\download.png
 C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\Bin\Debug\Images\folder.png
 C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\Bin\Debug\Images\text.png
 C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\Bin\Debug\Images\unknown.png
 C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\Bin\Debug\Images\upload.png
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\obj\Debug\App.g.cs
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\obj\Debug\TrialModeCtl.g.cs
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\obj\Debug\AboutPage.g.cs
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\obj\Debug\AddEditSuggestionListPage.g.cs
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\obj\Debug\AddEditSuggestionPage.g.cs
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\obj\Debug\SkydriveBrowseGet.g.cs
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\obj\Debug\ListSuggestionsPage.g.cs
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\obj\Debug\MainPage.g.cs
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\obj\Debug\SettingsPage.g.cs
+C:\Users\jack\Documents\GitHub\WP7_Suggester\SuggesterApp\SuggesterApp\obj\Debug\SkydriveBrowseSave.g.cs

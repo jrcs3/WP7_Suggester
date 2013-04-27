@@ -37,6 +37,12 @@ namespace SuggesterTools
                     {
                         reader = new StreamReader(file);
 
+                        string content;
+                        //using (StreamReader reader = new StreamReader(fs, Encoding.Unicode))
+                        {
+                            content = reader.ReadToEnd();
+                        }
+
                         XmlSerializer xs = new XmlSerializer(typeof(List<T>));
                         jogs.AddRange((List<T>)xs.Deserialize(reader));
                         reader.Close();

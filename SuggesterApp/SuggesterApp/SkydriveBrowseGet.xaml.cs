@@ -151,14 +151,22 @@ namespace SuggesterApp
         {
             try
             {
-                var fieldId = selectedItem.Id;
+                if (selectedItem == null)
+                {
+                    System.Diagnostics.Debug.WriteLine(_signInButton.TextType);
+                    MessageBox.Show("Please select a file");
+                }
+                else
+                {
+                    var fieldId = selectedItem.Id;
 
-                this.NavigationService.Navigate(new Uri(string.Format("/AddEditSuggestionListPage.xaml?fieldId={0}&remoteFileName={1}", selectedItem.Id, selectedItem.Name), UriKind.Relative));
-                //var client = new LiveConnectClient(App.LiveSession);
+                    this.NavigationService.Navigate(new Uri(string.Format("/AddEditSuggestionListPage.xaml?fieldId={0}&remoteFileName={1}", selectedItem.Id, selectedItem.Name), UriKind.Relative));
+                    //var client = new LiveConnectClient(App.LiveSession);
 
-                //client.DownloadCompleted += new EventHandler<LiveDownloadCompletedEventArgs>(client_DownloadCompleted);
-                //client.DownloadAsync(fieldId + "/content");
-                //client.DownloadAsync(fileId);
+                    //client.DownloadCompleted += new EventHandler<LiveDownloadCompletedEventArgs>(client_DownloadCompleted);
+                    //client.DownloadAsync(fieldId + "/content");
+                    //client.DownloadAsync(fileId);
+                }
             }
             catch (Exception ex)
             {

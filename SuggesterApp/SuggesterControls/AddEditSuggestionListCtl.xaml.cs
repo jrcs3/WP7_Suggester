@@ -10,6 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using SuggesterTools;
+using System.Text;
 
 namespace SuggesterControls
 {
@@ -96,6 +97,31 @@ namespace SuggesterControls
             {
                 _list.HistoryCount = HistoryCount;
             }
+        }
+
+        public string ValidationErrors { get; private set; }
+        public bool IsValid()
+        {
+            StringBuilder sb = new StringBuilder();
+            Retreave();
+            if (string.IsNullOrWhiteSpace(_list.ListName))
+            {
+                sb.AppendLine("List Name is Required");
+            }
+            if (string.IsNullOrWhiteSpace(_list.HeaderText))
+            {
+                sb.AppendLine("Header Text is Required");
+            }
+            if (string.IsNullOrWhiteSpace(_list.SingularName))
+            {
+                sb.AppendLine("Singular Name is Required");
+            }
+            if (string.IsNullOrWhiteSpace(_list.PluralName))
+            {
+                sb.AppendLine("Plural Name is Required");
+            }
+            ValidationErrors = sb.ToString();
+            return (sb.Length == 0);
         }
 
         private void _btnSave_Click(object sender, RoutedEventArgs e)

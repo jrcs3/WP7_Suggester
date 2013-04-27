@@ -86,65 +86,78 @@ namespace SuggesterApp
 
         private void _addEditSuggestionListCtl_Save(object sender, EventArgs e)
         {
-            doSave();
-            if (this.NavigationService.CanGoBack)
+            if (doSave())
             {
-                this.NavigationService.GoBack();
+                if (this.NavigationService.CanGoBack)
+                {
+                    this.NavigationService.GoBack();
+                }
             }
         }
 
-        private void doSave()
+        private bool doSave()
         {
-            _addEditSuggestionListCtl.Retreave();
-            if (_isNewList)
+            if (_addEditSuggestionListCtl.IsValid())
             {
-                var Lists = App.Config.Lists;
-                if (string.IsNullOrWhiteSpace(_addEditSuggestionListCtl.List.ListFileName))
+                _addEditSuggestionListCtl.Retreave();
+                if (_isNewList)
                 {
-                    string proposedFileName = string.Format("{0}.xml", _addEditSuggestionListCtl.List.ListName);
-                    int number = 0;
-                    while (Lists.Where(x => x.ListFileName == proposedFileName).Count() > 0)
+                    var Lists = App.Config.Lists;
+                    if (string.IsNullOrWhiteSpace(_addEditSuggestionListCtl.List.ListFileName))
                     {
-                        proposedFileName = string.Format("{0}_{1:00}.xml", _addEditSuggestionListCtl.List.ListName, ++number);
+                        string proposedFileName = string.Format("{0}.xml", _addEditSuggestionListCtl.List.ListName);
+                        int number = 0;
+                        while (Lists.Where(x => x.ListFileName == proposedFileName).Count() > 0)
+                        {
+                            proposedFileName = string.Format("{0}_{1:00}.xml", _addEditSuggestionListCtl.List.ListName, ++number);
+                        }
+                        _addEditSuggestionListCtl.List.ListFileName = proposedFileName;
                     }
-                    _addEditSuggestionListCtl.List.ListFileName = proposedFileName;
+                    App.Config.Lists.Add(_addEditSuggestionListCtl.List);
                 }
-                App.Config.Lists.Add(_addEditSuggestionListCtl.List);
+                App.Config.SaveXmlToFileInIS();
+                if (!string.IsNullOrWhiteSpace(_cachedList))
+                {
+                    var rVal = new List<Suggestion>();
+                    int lineNumber = 1;
+                    foreach (string line in _cachedList.Replace("\r", string.Empty).Split('\n'))
+                    {
+                        if (!string.IsNullOrWhiteSpace(line))
+                        {
+                            string trimmedLine = line.Trim();
+                            if (rVal.Where(x => x.Text == trimmedLine).Count() == 0)
+                            {
+                                rVal.Add(new Suggestion(lineNumber++, trimmedLine));
+                            }
+                            else
+                            {
+                                System.Diagnostics.Debug.WriteLine(trimmedLine);
+                            }
+                        }
+                    }
+                    StorageHelper<Suggestion> helper = new StorageHelper<Suggestion>(_addEditSuggestionListCtl.List.ListFileName);
+                    helper.SaveList(rVal);
+                    _cachedList = null;
+                    while (NavigationService.BackStack.First().Source.OriginalString.StartsWith("/SkydriveBrowseGet.xaml"))
+                    {
+                        NavigationService.RemoveBackEntry();
+                    }
+                }
+                return true;
             }
-            App.Config.SaveXmlToFileInIS();
-            if (!string.IsNullOrWhiteSpace(_cachedList))
+            else
             {
-                var rVal = new List<Suggestion>();
-                int lineNumber = 1;
-                foreach (string line in _cachedList.Replace("\r", string.Empty).Split('\n'))
-                {
-                    if (!string.IsNullOrWhiteSpace(line))
-                    {
-                        string trimmedLine = line.Trim();
-                        if (rVal.Where(x => x.Text == trimmedLine).Count() == 0)
-                        {
-                            rVal.Add(new Suggestion(lineNumber++, trimmedLine));
-                        }
-                        else
-                        {
-                            System.Diagnostics.Debug.WriteLine(trimmedLine);
-                        }
-                    }
-                }
-                StorageHelper<Suggestion> helper = new StorageHelper<Suggestion>(_addEditSuggestionListCtl.List.ListFileName);
-                helper.SaveList(rVal);
-                _cachedList = null;
-                while (NavigationService.BackStack.First().Source.OriginalString.StartsWith("/SkydriveBrowseGet.xaml"))
-                {
-                    NavigationService.RemoveBackEntry();
-                }
+                MessageBox.Show(_addEditSuggestionListCtl.ValidationErrors);
+                return false;
             }
         }
 
         private void _addEditSuggestionListCtl_LoadList(object sender, EventArgs e)
         {
-            doSave();
-            this.NavigationService.Navigate(new Uri(string.Format("/ListSuggestionsPage.xaml?xmlFile={0}&listName={1}", _suggestionList.ListFileName, Uri.EscapeUriString(_suggestionList.PluralName)), UriKind.Relative));
+            if (doSave())
+            {
+                this.NavigationService.Navigate(new Uri(string.Format("/ListSuggestionsPage.xaml?xmlFile={0}&listName={1}", _suggestionList.ListFileName, Uri.EscapeUriString(_suggestionList.PluralName)), UriKind.Relative));
+            }
         }
 
         void client_DownloadCompleted(object sender, LiveDownloadCompletedEventArgs e)
